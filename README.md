@@ -1,5 +1,5 @@
 # PSQL-installation
-/*Steps to install postgresSQL on TACC*\
+*Steps to install postgresSQL on TACC*\
 <br>
 Postgress setup requirements - \
 **The following environment variables will be required before running the other commands-**
