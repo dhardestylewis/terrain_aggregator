@@ -13,7 +13,11 @@ export POSTGRES_DB=venmo
 env | grep POSTGRES*
 
 **Commands to install postgres on TACC -**\
-Use **singularity** to run all the commands here-
+Use **singularity** to run all the commands(given below) here\
+<br>
+ module load tacc-singularity
+ 
+ 
 
 
 
