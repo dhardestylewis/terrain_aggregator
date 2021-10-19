@@ -22,7 +22,7 @@ if running on login nodes then use idev\
  >SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif&
  <br>
  You should see the following message - LOG:  database system is ready to accept connections<br>
- Press enter to get back the command prompt
+ Press enter to get back the command prompt and then run the following command
  >psql -U postgres -d postgres -h 127.0.0.1
  
  
