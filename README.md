@@ -1,5 +1,14 @@
 # PSQL-installation
 Steps to install postgresSQL on TACC-\
 Postgress setup requirements -
+**The following environment variables will be required before running the other commands-**
+export POSTGRES_PASS=password
+export POSTGRES_ADDR=127.0.0.1:5432
+export POSTGRES_USER=postgres
+export POSTGRES_DB=venmo
+
+**To print the list of environment variables, the following command can be used -**
+env | grep POSTGRES*
+
 
 
