@@ -19,7 +19,7 @@ Use **singularity** to run all the commands(given below) -\
  >idev\
  >module load tacc-singularity\
  >singularity pull docker://postgres\
- >SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif&\
+ >SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif&
  <br>
  #You should see the following message - LOG:  database system is ready to accept connections\
  #Press enter to get back the command prompt
