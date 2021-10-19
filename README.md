@@ -16,7 +16,7 @@ Postgress setup requirements - \
 Use **singularity** to run all the commands(given below) -\
 <br>
 #if running on login nodes then use idev
- >idev
+ >idev\
  >module load tacc-singularity\
  >singularity pull docker://postgres\
  >SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif&\
