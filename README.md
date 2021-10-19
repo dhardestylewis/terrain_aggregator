@@ -1,5 +1,5 @@
 # PSQL-installation
-Steps to install postgresSQL on TACC-
+Steps to install postgresSQL on TACC-\newline
 Postgress setup requirements -
 
 
