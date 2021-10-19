@@ -1,6 +1,6 @@
 # PSQL-installation
 Steps to install postgresSQL on TACC\
-\\
+\newline
 Postgress setup requirements - \
 **The following environment variables will be required before running the other commands-**
 export POSTGRES_PASS=password \
