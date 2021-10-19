@@ -15,9 +15,9 @@ env | grep POSTGRES*
 **Commands to install postgres on TACC -**\
 Use **singularity** to run all the commands(given below) here\
 <br>
- module load tacc-singularity
+ module load tacc-singularity\
  singularity pull docker://postgres\
- SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif\
+ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif
  
  
  
