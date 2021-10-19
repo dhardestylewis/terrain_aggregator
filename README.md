@@ -13,7 +13,7 @@ export POSTGRES_DB=venmo
 env | grep POSTGRES*
 
 **Commands to run postgres on TACC -**\
-Use **singularity** to run all the commands(given below) here\
+Use **singularity** to run all the commands(given below) -\
 <br>
  module load tacc-singularity\
  singularity pull docker://postgres\
