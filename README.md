@@ -17,7 +17,10 @@ Use **singularity** to run all the commands(given below) here\
 <br>
  module load tacc-singularity\
  singularity pull docker://postgres\
- SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif
+ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif\
+ psql -U postgres -d postgres -h 127.0.0.1
+ 
+ 
  
  
  
