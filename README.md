@@ -48,7 +48,7 @@ if running on login nodes then use idev
 Use **singularity** to run all the commands(given below) -\
 <br>
  >module load tacc-singularity\
- >singularity pull docker://postgres\
+ >singularity pull docker://postgres\ #singularity pull has to be done only once
  >SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif&
  <br> #You should see the following message - LOG:  database system is ready to accept connections
  <br> #Press enter to get back the command prompt and then run the following command\
