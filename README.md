@@ -37,11 +37,11 @@ such as:
 [//]: # (This entire section may be unnecessary.)
 [//]: # (TODO: test next subsection of instructions without running these commands first.)
 ## PostgreSQL setup requirements
-If running on login nodes then use idev
+If on a login node, then enter a computational node by executing the following command:
 ```bash
 idev
 ```
-**The following environment variables should be set before running the other commands**
+**The following environment variables may need to be set before continuing**
 ```bash
 export POSTGRES_PASS=password
 export POSTGRES_ADDR=127.0.0.1:5432
@@ -82,7 +82,7 @@ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata si
 LOG:  database system is ready to accept connections
 ```
 
-## Press enter to get back the command prompt and then run the following command
+## Press enter to get back the command prompt and then run the following command to connect to the PostgreSQL database instance
 
 ```bash
 psql -U postgres -d postgres -h 127.0.0.1
@@ -99,8 +99,7 @@ psql -U postgres -d postgres -h 127.0.0.1
 
 
 # Alternatives 
-`/bin/psql` is available on Stampede2 without relying on Singularity/Docker. We have not tested here an initiation of PostgreSQL database using strictly this installation.
+`/bin/psql` is available on Stampede2 without relying on Singularity/Docker. We have not tested here strictly using the pre-installed PostgreSQL software to initiate a database instance.
  
  
 # This installation method was inspired by [sshh12/venmo-research](https://github.com/sshh12/venmo-research)
-
