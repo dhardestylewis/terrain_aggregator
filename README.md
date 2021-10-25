@@ -1,8 +1,7 @@
- # For further instructions please refer to [sshh12/venmo-research](https://github.com/sshh12/venmo-research)
  
  
- # PSQL-installation
-*Steps to install PostgreSQL on TACC*\
+# PostgreSQL installation using Singularity on Stampede2
+*Steps to install PostgreSQL on Stampede2 at TACC*
 Installation of a containerized instance of PostgreSQL in a high performance computing environment (Stampede2)
 
 
@@ -36,11 +35,13 @@ using HPC web-portals similar to
 If running on login nodes then use idev
 ```bash
 >idev
-<br>#**The following environment variables should be set before running the other commands-**<br>
->export POSTGRES_PASS=password
->export POSTGRES_ADDR=127.0.0.1:5432
->export POSTGRES_USER=postgres
->export POSTGRES_DB=postgres
+```
+#**The following environment variables should be set before running the other commands-**
+```bash
+export POSTGRES_PASS=password
+export POSTGRES_ADDR=127.0.0.1:5432
+export POSTGRES_USER=postgres
+export POSTGRES_DB=postgres
 ```
 
 **To verify if the environment variables are correctly set, the following command can be used -**
@@ -50,7 +51,7 @@ env | grep POSTGRES*
 
 
 ## **Commands to run PostgreSQL at TACC**
-Use **Singularity** to run all the commands (given below)
+[\\]: # (Use **Singularity** to run all the commands (given below))
 ```bash
 module load tacc-singularity
 singularity pull docker://postgres  ## singularity pull has to be done only once
@@ -79,13 +80,5 @@ psql -U postgres -d postgres -h 127.0.0.1
 `/bin/psql` is available on Stampede2 without relying on Singularity/Docker. We have not tested here an initiation of PostgreSQL database using strictly this installation.
  
  
- 
- 
- 
-
-
-
-
-
-
+# This installation method was inspired by [sshh12/venmo-research](https://github.com/sshh12/venmo-research)
 
