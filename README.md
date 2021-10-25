@@ -51,7 +51,7 @@ env | grep POSTGRES*
 
 
 ## **Commands to run PostgreSQL at TACC**
-[\\]: # (Use **Singularity** to run all the commands (given below))
+[\\]: # (Use **Singularity** to run all the commands, given below)
 ```bash
 module load tacc-singularity
 singularity pull docker://postgres  ## singularity pull has to be done only once
