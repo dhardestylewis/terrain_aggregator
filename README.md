@@ -8,13 +8,16 @@ Installation of a containerized instance of PostgreSQL in a high performance com
 
 
 # Motivation 
-Containerized PostgreSQL is useful step to create, manage, 
-and access PostgreSQL databases directly on HPC environments 
-using HPC web-portals similar to
-[PT2050 DataX](https://ptdatax.tacc.utexas.edu/),
-[DesignSafe-CI](https://www.designsafe-ci.org/), 
-[the TACC visualization portal](https://vis.tacc.utexas.edu/), or
-[SkySQL](https://mariadb.com/products/skysql/)
+
+Containerized PostgreSQL is a useful step to create, manage, 
+and access PostgreSQL databases directly on an HPC environment. 
+
+Containerizing the database software enables use by HPC web-portals
+such as:
+- [PT2050 DataX](https://ptdatax.tacc.utexas.edu/),
+- [DesignSafe-CI](https://www.designsafe-ci.org/), 
+- [the TACC visualization portal](https://vis.tacc.utexas.edu/),
+- [SkySQL](https://mariadb.com/products/skysql/)
 
 
 # Limitations 
