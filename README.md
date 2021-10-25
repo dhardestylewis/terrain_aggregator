@@ -1,7 +1,9 @@
  
  
 # PostgreSQL installation using Singularity on Stampede2
+
 *Steps to install PostgreSQL on Stampede2 at TACC*
+
 Installation of a containerized instance of PostgreSQL in a high performance computing environment (Stampede2)
 
 
