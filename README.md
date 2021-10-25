@@ -62,14 +62,14 @@ env | grep POSTGRES*
 module load tacc-singularity
 ```
 
-## Use the following command for PostgreSQL
+## Use the following commands to pull & inititiate a PostgreSQL database instance
 
 ```bash
 singularity pull docker://postgres  ## singularity pull has to be done only once
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgres_latest.sif &
 ```
 
-## OR use the following command for PostgreSQL+PostGIS
+## OR use the following commands to pull & initiate a PostgreSQL+PostGIS database instance
 
 ```bash
 singularity pull docker://postgis/postgis  ## singularity pull has to be done only once
