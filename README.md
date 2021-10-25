@@ -57,16 +57,33 @@ env | grep POSTGRES*
 
 ## **Commands to run PostgreSQL at TACC**
 [\\]: # (Use **Singularity** to run all the commands, given below)
+
 ```bash
 module load tacc-singularity
-singularity pull docker://postgres  ## singularity pull has to be done only once
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run  --cleanenv --bind $SCRATCH:/var postgres_latest.sif &
 ```
-## You should see the following message -
+
+## Use the following command for PostgreSQL
+
+```bash
+singularity pull docker://postgres  ## singularity pull has to be done only once
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgres_latest.sif &
+```
+
+## OR use the following command for PostgreSQL+PostGIS
+
+```bash
+singularity pull docker://postgis/postgis  ## singularity pull has to be done only once
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_latest.sif &
+```
+
+## You should see the following message
+
 ```bash
 LOG:  database system is ready to accept connections
 ```
+
 ## Press enter to get back the command prompt and then run the following command
+
 ```bash
 psql -U postgres -d postgres -h 127.0.0.1
 ```
