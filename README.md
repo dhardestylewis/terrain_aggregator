@@ -1,6 +1,6 @@
  
  
-# PostgreSQL installation using Singularity on Stampede2
+# PostgreSQL+PostGIS installation using Singularity on Stampede2
 
 *Steps to install PostgreSQL on Stampede2 at TACC*
 
