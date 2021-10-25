@@ -26,7 +26,7 @@ such as:
   On Stampede2 the [max allocated time](https://portal.tacc.utexas.edu/user-guides/stampede2#queues) available is 5 days 
 
 
-# Pre-requisite software
+# Prerequisite software
 - [Docker](https://www.docker.com/) or [Singularity](https://sylabs.io/singularity/)
 - Shell environment, *eg* `bash`, `zsh`, *etc*
 
