@@ -9,8 +9,11 @@ Installation of a containerized instance of PostgreSQL in a high performance com
 # Motivation 
 Containerized PostgreSQL is useful step to create, manage, 
 and access PostgreSQL databases directly on HPC environments 
-using HPC web-portals similar to PT2050 DataX, DesignSafe-CI, 
-the TACC visualization portal, or SkySQL
+using HPC web-portals similar to
+[PT2050 DataX](https://ptdatax.tacc.utexas.edu/),
+[DesignSafe-CI](https://www.designsafe-ci.org/), 
+[the TACC visualization portal](https://vis.tacc.utexas.edu/), or
+[SkySQL](https://mariadb.com/products/skysql/)
 
 
 # Limitations 
@@ -19,7 +22,7 @@ the TACC visualization portal, or SkySQL
   On Stampede2 the [max allocated time](https://portal.tacc.utexas.edu/user-guides/stampede2#queues) available is 5 days 
 
 
-# Prerequisites softwares
+# Pre-requisite software
 - [Docker](https://www.docker.com/) or [Singularity](https://sylabs.io/singularity/)
 - Shell environment, *eg* `bash`, `zsh`, *etc*
 
