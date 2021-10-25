@@ -41,7 +41,7 @@ If running on login nodes then use idev
 ```bash
 idev
 ```
-#**The following environment variables should be set before running the other commands**
+**The following environment variables should be set before running the other commands**
 ```bash
 export POSTGRES_PASS=password
 export POSTGRES_ADDR=127.0.0.1:5432
