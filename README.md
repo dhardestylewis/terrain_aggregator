@@ -36,7 +36,7 @@ using HPC web-portals similar to
 ## PostgreSQL setup requirements
 If running on login nodes then use idev
 ```bash
->idev
+idev
 ```
 #**The following environment variables should be set before running the other commands**
 ```bash
