@@ -87,7 +87,7 @@ LOG:  database system is ready to accept connections
 ```bash
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgres_latest.sif psql  -U postgres -d postgres -h 127.0.0.1
 ```
-(Note: There is an existing version of `psql` on stampede2, we suggest using `psql` from the Singularity image like shown above.)
+(Note: There is an existing version of `psql` on Stampede2, we suggest using `psql` from the Singularity image like shown above.)
 
 
 # Testing environment
