@@ -85,10 +85,11 @@ LOG:  database system is ready to accept connections
 ## Press enter to get back the command prompt and then run the following command to connect to the PostgreSQL database instance
 
 ```bash
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgres_latest.sif psql  -U postgres -d postgres -h 127.0.0.1
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgres_latest.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 (Note: There is an existing version of `psql` on Stampede2, we suggest using `psql` from the Singularity image like shown above.)
 
+Note : Instead of SCRATCH/pgdata you can use any database on stampede2 that you have access to.
 
 # Testing environment
 - [Stampede2](https://www.tacc.utexas.edu/systems/stampede2)
@@ -104,3 +105,9 @@ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata si
  
  
 # This installation method was inspired by [sshh12/venmo-research](https://github.com/sshh12/venmo-research)
+
+
+
+
+
+
