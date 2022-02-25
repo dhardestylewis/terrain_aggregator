@@ -146,7 +146,31 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 
 *QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
 
+```sql
+/* Replace with your preferred location below */
+COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO '/scratch/04950/dhl/distinct_srid.csv' (FORMAT csv) ;
+```
 
+```bash
+while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < /scratch/04950/dhl/distinct_srid.csv
+
+## Conduct a `gdalbuildvrt` for each unique EPSG:
+for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_projection_difference -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
+
+## Conduct a `gdal_translate` for each unique EPSG's VRT:
+for filename in $(ls *.srid); do gdal_translate -colorinterp undefined ${filename}.vrt ${filename}-translated.vrt; done
+
+## Conduct a `gdalwarp` for each unique EPSG's VRT:
+for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:3083 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
+
+## Conduct a `gdalbuildvrt` to create a VRT of warped VRTs:
+gdalbuildvrt -resolution highest albers-warped.vrt *-warped.vrt
+
+mkdir albers-warped.d
+
+## Conduct a retiling:
+gdal_retile.py -overlap 100 -tileIndex albers-warped.shp -csv albers-warped.csv -ps 1600 1600 -levels 20 -resume -targetDir albers-warped.d albers-warped.vrt
+```
 
 # PostgreSQL+PostGIS installation using Singularity on Stampede2
 
