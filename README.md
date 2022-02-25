@@ -1,5 +1,53 @@
- 
- 
+# TNRIS Lidar DEM tiles at TACC
+
+@TACC now hosts TNRIS Lidar tiles for TACC users.
+
+To begin using TACC resources, please create a TACC account at the following page:
+https://portal.tacc.utexas.edu/account-request
+
+Once you have a TACC account, submit a ticket at the following page and CC dhl@tacc.utexas.edu
+https://portal.tacc.utexas.edu/tacc-consulting
+
+# Software requirements (on Stampede2)
+   - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
+   - Conda environment : `https://github.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/edit/main/environment.yml`
+
+## Singularity download and usage
+
+This Singularity image includes support for the following 3 PostgreSQL - GDAL/OGR translators:
+   - `raster2pgsql` : to create a PostgreSQL script to add rasters to a PostgreSQL table
+   - `shp2pgsql` : to create a PostgreSQL script to add features from a Shapefile to a PostgreSQL table
+   - `pgsql2shp` : to create a Shapefile from an existing PostgreSQL table
+
+To downlaod this Singularity image, use the following commands from Stampede2:
+```bash
+## to enter a computational node: Singularity cannot be used from a development node
+idev
+## to load the pre-existing Singularity module from TACC's module repository
+module load tacc-singularity
+## to download this Singularity image from the online Docker Hub image repository
+singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr
+```
+
+To initiate a new PostgreSQL+PostGIS database on Stampede2, you may use the following command:
+```bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
+```
+
+To connect to the existing TNRIS Lidar PostgreSQL database, use the following command:
+```bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
+```
+Please submit a ticket if you don't have permission to access this directory and be sure to CC dhl@tacc.utexas.edu
+https://portal.tacc.utexas.edu/tacc-consulting
+
+*Note :* Please wait for the following output before trying to access this database:
+```bash
+LOG:  database system is ready to accept connections
+```
+
+To 
+
 # PostgreSQL+PostGIS installation using Singularity on Stampede2
 
 *Steps to install PostgreSQL+PostGIS on Stampede2 at TACC*
