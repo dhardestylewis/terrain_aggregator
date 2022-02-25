@@ -144,6 +144,10 @@ Once this table is corrected, the following command can be run from the PostGIS 
 pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P pgpass -u postgres -g envelope_albers -k postgres public.tnris_lidar_tiles
 ```
 
+*QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
+
+
+
 # PostgreSQL+PostGIS installation using Singularity on Stampede2
 
 *Steps to install PostgreSQL+PostGIS on Stampede2 at TACC*
