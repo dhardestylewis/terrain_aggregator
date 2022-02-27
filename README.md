@@ -146,22 +146,37 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 
 *QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
 
-```sql
+PostgreSQL:
+```sqlthe
 /* Replace with your preferred location below */
 COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO '/scratch/04950/dhl/distinct_srid.csv' (FORMAT csv) ;
 ```
 
+Command line:
 ```bash
+## Please note that any tiles whose pixeltype != Float32 will need to be pre-treated with the following command before starting this workflow.
+##  Thus far, ~142 tiles from the following two projects are impacted:
+##   - capcog-2007-140cm-caldwell-travis-williamson
+##   - usgs-2016-70cm-middle-brazos-lake-whitney
+# gdal_translate -ot Float32 src_dataset dst_dataset.vrt
+## It will be necessary to substitute in these VRTs for the source tiles in the following `gdalbuildvrt` file lists
+
+## Create a file list of each tileset grouped by SRID/EPSG code:
 while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < /scratch/04950/dhl/distinct_srid.csv
 
 ## Conduct a `gdalbuildvrt` for each unique EPSG:
-for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_projection_difference -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
+for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
 
 ## Conduct a `gdal_translate` for each unique EPSG's VRT:
 for filename in $(ls *.srid); do gdal_translate -colorinterp undefined ${filename}.vrt ${filename}-translated.vrt; done
 
 ## Conduct a `gdalwarp` for each unique EPSG's VRT:
 for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:3083 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
+
+## EPSGs 2277-2279 will require manual intervention in order to tile successfully.
+## They have a vertical datum of NAVD88 (ftUS).
+## Run the following command to shift their pixel values to NAVD88 (m):
+for filename in $(ls 227[7-9].srid); do gdalwarp -s_srs $(basename ${filename} .srid)+6360 -t_srs EPSG:3083+5703 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
 
 ## Conduct a `gdalbuildvrt` to create a VRT of warped VRTs:
 gdalbuildvrt -resolution highest albers-warped.vrt *-warped.vrt
