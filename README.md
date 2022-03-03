@@ -181,10 +181,18 @@ for filename in $(ls 227[7-9].srid); do gdalwarp -s_srs $(basename ${filename} .
 ## Conduct a `gdalbuildvrt` to create a VRT of warped VRTs:
 gdalbuildvrt -resolution highest albers-warped.vrt *-warped.vrt
 
-mkdir albers-warped.d
-
 ## Conduct a retiling:
+mkdir albers-warped.d
 gdal_retile.py -overlap 100 -tileIndex albers-warped.shp -csv albers-warped.csv -ps 1600 1600 -levels 20 -resume -targetDir albers-warped.d albers-warped.vrt
+
+## Create a VRT of the retiles:
+gdalbuildvrt -resolution highest albers-warped.d.vrt albers-warped.d/*.tif
+
+
+## Crop watershed-delineated DEMs from these retiles, using features labelled by the `index` attribute in a separate vector image
+mkdir HUCs.d
+NUMBER_OF_HUCS=739
+for huc in $(seq 0 $(( ${NUMBER_OF_HUCS} - 1)) ); do gdalwarp -multi -cutline HUCs.shp -cl HUCs -cwhere "index=${huc}" -crop_to_cutline albers-warped.d.vrt HUCs.d/HUC${huc}.tif ; done
 ```
 
 # Testing environment
