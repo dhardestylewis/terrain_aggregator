@@ -51,7 +51,9 @@ https://portal.tacc.utexas.edu/tacc-consulting
 LOG:  database system is ready to accept connections
 ```
 
-# To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table:
+# Updating the database with new Lidar tiles
+
+## To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
 
 From the parent directory of TNRIS Lidar data, on the command line:
 ```bash
@@ -150,7 +152,7 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 
 *QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
 
-## Retiling workflow
+# Retiling workflow
 
 PostgreSQL:
 ```sqlthe
