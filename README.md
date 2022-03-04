@@ -29,11 +29,6 @@ module load tacc-singularity
 singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr
 ```
 
-To initiate a new PostgreSQL+PostGIS database on Stampede2, you may use the following command:
-```bash
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
-```
-
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following command:
 ```bash
 cp -R /work2/04950/dhl/stampede2/pgdata $SCRATCH
