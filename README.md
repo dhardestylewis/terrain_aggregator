@@ -26,14 +26,21 @@ idev
 ## to load the pre-existing Singularity module from TACC's module repository
 module load tacc-singularity
 ## to download this Singularity image from the online Docker Hub image repository
-singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr
+singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr $SCRATCH/postgis_14-3.2-gdalogr.sif
+```
+
+To clone this Git repository, use the following commands from Stampede2:
+```bash
+git clone https://github.com/dhardestylewis/TNRIS-Lidar-PostgreSQL.git
+cd TNRIS-Lidar-PostgreSQL
+export TNRIS_LIDAR_POSTGRESQL=$(pwd)
 ```
 
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following command:
 ```bash
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f TNRIS-Lidar-Tiles.sql
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif &
+for filename in $(ls ${TNRIS_LIDAR_POSTGRESQL}/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
 
@@ -64,7 +71,7 @@ COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO '$SCR
 comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
 
 ## Run raster2pgsql from the Singularity image
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif bash
 ```
 ```bash
 ## From the Singularity container connected to the database
@@ -159,7 +166,7 @@ Command line:
 ## It will be necessary to substitute in these VRTs for the source tiles in the following `gdalbuildvrt` file lists
 
 ## Create a file list of each tileset grouped by SRID/EPSG code:
-while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < /scratch/04950/dhl/distinct_srid.csv
+while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < $TNRIS_LIDAR_POSTGRESQL/distinct_srid.csv
 
 ## Conduct a `gdalbuildvrt` for each unique EPSG:
 for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
