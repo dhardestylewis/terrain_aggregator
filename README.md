@@ -53,7 +53,7 @@ LOG:  database system is ready to accept connections
 
 # Updating the database with new Lidar tiles
 
-## To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
+To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
 
 From the parent directory of TNRIS Lidar data, on the command line:
 ```bash
