@@ -156,6 +156,12 @@ PostgreSQL:
 COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO '/scratch/04950/dhl/distinct_srid.csv' (FORMAT csv) ;
 ```
 
+Create and activate the Conda environment from the command line:
+```bash
+conda env create -f $TNRIS_LIDAR_POSTGRESQL/gdal.yml
+conda activate gdal
+```
+
 Command line:
 ```bash
 ## Please note that any tiles whose pixeltype != Float32 will need to be pre-treated with the following command before starting this workflow.
