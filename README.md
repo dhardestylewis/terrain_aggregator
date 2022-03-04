@@ -150,6 +150,8 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 
 *QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
 
+## Retiling workflow
+
 PostgreSQL:
 ```sqlthe
 /* Replace with your preferred location below */
@@ -197,7 +199,6 @@ gdal_retile.py -overlap 100 -tileIndex albers-warped.shp -csv albers-warped.csv 
 
 ## Create a VRT of the retiles:
 gdalbuildvrt -resolution highest albers-warped.d.vrt albers-warped.d/*.tif
-
 
 ## Crop watershed-delineated DEMs from these retiles, using features labelled by the `index` attribute in a separate vector image
 mkdir HUCs.d
