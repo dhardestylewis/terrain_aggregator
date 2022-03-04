@@ -1,0 +1,9 @@
+name: gdal
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - gdal=3.4.1
+  - postgis
+  - mapserver
+prefix: /work/04950/dhl/stampede2/miniconda3/envs/gdal

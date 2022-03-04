@@ -1,0 +1,17 @@
+ALTER TABLE aaa ADD COLUMN path_parts text[], ADD COLUMN project text, ADD COLUMN filename text ;
+ALTER TABLE aaamissing ADD COLUMN absolutepath text, ADD COLUMN project text, ADD COLUMN srid_orig integer, ADD COLUMN srid integer, ADD COLUMN pixeltype text, ADD COLUMN x float, ADD COLUMN y float, ADD COLUMN width integer, ADD COLUMN height integer ;
+SELECT AddGeometryColumn('public','aaamissing','envelope',0,'POLYGON',2) ;
+SELECT AddGeometryColumn('public','aaamissing','envelope_albers',6579,'POLYGON',2) ;
+SELECT AddGeometryColumn('public','aaamissing','centroid',0,'POINT',2) ;
+SELECT AddGeometryColumn('public','aaamissing','centroid_albers',6579,'POINT',2) ;
+UPDATE aaa SET path_parts = REGEXP_SPLIT_TO_ARRAY(absolutepath,'/') ;
+UPDATE aaa SET project = path_parts[6] ;
+UPDATE aaa SET filename = path_parts[8] ;
+UPDATE aaamissing SET project = p.project FROM aaa AS p WHERE aaamissing.filename = p.filename ;
+UPDATE aaamissing SET absolutepath = p.absolutepath FROM aaa AS p WHERE aaamissing.filename = p.filename ;
+ALTER TABLE aaa DROP COLUMN path_parts ;
+UPDATE aaamissing SET srid_orig = ST_SRID(rast) ;
+UPDATE aaamissing SET srid = ST_SRID(rast) ;
+UPDATE aaamissing SET pixeltype = ST_BandPixelType(rast) ;
+UPDATE aaamissing SET width = ST_Width(rast) ;
+UPDATE aaamissing SET height = ST_Height(rast) ;
