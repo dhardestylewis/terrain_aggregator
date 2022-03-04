@@ -36,7 +36,8 @@ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata si
 
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following command:
 ```bash
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
+cp -R /work2/04950/dhl/stampede2/pgdata $SCRATCH
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
 ```
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
 
@@ -60,14 +61,14 @@ mv $WORK/find_dem_tiles-sorted.csv $WORK/find_dem_tiles.csv
 From the PostgreSQL database:
 ```sql
 /* replace the following CSV path with your equivalent */
-COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO '/work2/04950/dhl/stampede2/select_all_dem_tiles.csv' (FORMAT csv) ;
+COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO '$SCRATCH/select_all_dem_tiles.csv' (FORMAT csv) ;
 ```
 
 ```bash
-comm -23 $SCRATCH/find_dem_tiles.csv /work2/04950/dhl/stampede2/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
+comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
 
 ## Run raster2pgsql from the Singularity image
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK2/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif bash
 ```
 ```bash
 ## From the Singularity container connected to the database
@@ -81,7 +82,7 @@ From the PostgreSQL database:
 ```sql
 CREATE TABLE missing_dem_tiles_paths (absolutepath text) ;
 /* Be sure to replace the following CSV path with your specific CSV path */
-COPY missing_dem_tiles_paths FROM '/work2/04950/dhl/stampede2/missing_dem_tiles.csv' WITH (FORMAT csv) ;
+COPY missing_dem_tiles_paths FROM '$WORK2/missing_dem_tiles.csv' WITH (FORMAT csv) ;
 ```
 
 From the command line:
