@@ -34,6 +34,7 @@ To connect to the existing TNRIS Lidar PostgreSQL database, use the following co
 cp -R /work2/04950/dhl/stampede2/pgdata $SCRATCH
 rm $SCRATCH/pgdata/postmaster.pid
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif &
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
 
