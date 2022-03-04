@@ -10,7 +10,7 @@ https://portal.tacc.utexas.edu/tacc-consulting
 
 # Software requirements (on Stampede2)
    - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
-   - Conda environment : `https://github.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/edit/main/environment.yml`
+   - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/main/gdal.yml`
 
 ## Singularity download and usage
 
