@@ -11,6 +11,7 @@ https://portal.tacc.utexas.edu/tacc-consulting
 # Software requirements (on Stampede2)
    - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
    - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/main/gdal.yml`
+   - AWS CLI : `https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
 
 ## Singularity download and usage
 
@@ -55,9 +56,17 @@ LOG:  database system is ready to accept connections
 
 To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
 
+```bash
+cds
+mkdir tnris-lidardata
+cd tnris-lidardata
+export TNRIS_LIDAR_DATA=$(pwd)
+cd ..
+aws s3 cp s3://tnris-public-data/production-data/ tnris-lidardata --recursive
+```
+
 From the parent directory of TNRIS Lidar data, on the command line:
 ```bash
-cd <parent_directory_of TNRIS Lidar Data>
 find $(pwd) -maxdepth 4 -type f -wholename "*/dem/*.tif" -o -wholename "*/dem/*.img" -o -wholename "*/dem/*.dem" > $WORK/find_dem_tiles.csv
 sort -u $WORK/find_dem_tiles.csv > $WORK/find_dem_tiles-sorted.csv
 mv $WORK/find_dem_tiles-sorted.csv $WORK/find_dem_tiles.csv
