@@ -64,6 +64,8 @@ export TNRIS_LIDAR_DATA=$(pwd)
 cd ..
 aws s3 cp s3://tnris-public-data/production-data/ tnris-lidardata --recursive
 ```
+For reference, TNRIS's AWS S3 bucket of their Lidar data can be publicly accessed at the following URL:
+https://s3.console.aws.amazon.com/s3/buckets/tnris-public-data?region=us-east-1&prefix=production-data/
 
 From the parent directory of TNRIS Lidar data, on the command line:
 ```bash
