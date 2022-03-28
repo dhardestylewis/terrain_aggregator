@@ -1,0 +1,14 @@
+<VRTDataset rasterXSize="83629" rasterYSize="152618">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(2011) / Texas Central (ftUS)",GEOGCS["NAD83(2011)",DATUM["NAD83_National_Spatial_Reference_System_2011",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","1116"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","6318"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",29.6666666666667],PARAMETER["central_meridian",-100.333333333333],PARAMETER["standard_parallel_1",31.8833333333333],PARAMETER["standard_parallel_2",30.1166666666667],PARAMETER["false_easting",2296583.333],PARAMETER["false_northing",9842500],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","6578"]]</SRS>
+  <GeoTransform>  1.1526473799999999e+06,  1.0000000000000000e+00,  0.0000000000000000e+00,  1.0344184939999999e+07,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-9999</NoDataValue>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">6578_Gray_32BF.csv.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="83629" RasterYSize="152618" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="83629" ySize="152618" />
+      <DstRect xOff="0" yOff="0" xSize="83629" ySize="152618" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

@@ -1,0 +1,14 @@
+<VRTDataset rasterXSize="391434" rasterYSize="410197">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]]</SRS>
+  <GeoTransform>  1.3961660660299542e+06,  9.9985302252220343e-01,  0.0000000000000000e+00,  7.2662552121853121e+06,  0.0000000000000000e+00, -9.9985302252220343e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1" blockXSize="512">
+    <NoDataValue>-9999</NoDataValue>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">2279_Undefined_32BF.csv.vrt-translated.vrt-warped_compound.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="391434" RasterYSize="410197" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="391434" ySize="410197" />
+      <DstRect xOff="0" yOff="0" xSize="391434" ySize="410197" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

@@ -1,0 +1,44 @@
+<VRTDataset rasterXSize="305063" rasterYSize="206015" subClass="VRTWarpedDataset">
+  <SRS dataAxisToSRSAxisMapping="1,2,3">COMPD_CS["NAD83 / Texas Centric Albers Equal Area + NAVD88 height",PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]],VERT_CS["NAVD88 height",VERT_DATUM["North American Vertical Datum 1988",2005,AUTHORITY["EPSG","5103"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Gravity-related height",UP],AUTHORITY["EPSG","5703"]]]</SRS>
+  <GeoTransform>  1.7231005245744956e+06,  9.1376827574786523e-01,  0.0000000000000000e+00,  7.3850529211469302e+06,  0.0000000000000000e+00, -9.1376827574786523e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1" subClass="VRTWarpedRasterBand">
+    <NoDataValue>-9999</NoDataValue>
+  </VRTRasterBand>
+  <BlockXSize>512</BlockXSize>
+  <BlockYSize>128</BlockYSize>
+  <GDALWarpOptions>
+    <WarpMemoryLimit>6.71089e+07</WarpMemoryLimit>
+    <ResampleAlg>NearestNeighbour</ResampleAlg>
+    <WorkingDataType>Float32</WorkingDataType>
+    <Option name="INIT_DEST">NO_DATA</Option>
+    <Option name="APPLY_VERTICAL_SHIFT">YES</Option>
+    <Option name="MULT_FACTOR_VERTICAL_SHIFT">0.304800609601219241</Option>
+    <Option name="ERROR_OUT_IF_EMPTY_SOURCE_WINDOW">FALSE</Option>
+    <SourceDataset relativeToVRT="1">2278_Undefined_32BF.csv.vrt-translated.vrt</SourceDataset>
+    <Transformer>
+      <GenImgProjTransformer>
+        <SrcGeoTransform>2387200.15690512629,2.99940700000014004,0,14109600,0,-2.99940699999305327</SrcGeoTransform>
+        <SrcInvGeoTransform>-795890.706698028953,0.333399235248818593,0,4704129.84967784584,0,-0.333399235249606352</SrcInvGeoTransform>
+        <DstGeoTransform>1723100.52457449562,0.913768275747865233,0,7385052.9211469302,0,-0.913768275747865233</DstGeoTransform>
+        <DstInvGeoTransform>-1885708.41241368325,1.09436935658721479,0,8081975.61367809772,0,-1.09436935658721479</DstInvGeoTransform>
+        <ReprojectTransformer>
+          <ReprojectionTransformer>
+            <SourceSRS>COMPD_CS["NAD83 / Texas South Central (ftUS) + NAVD88 height (ftUS)",PROJCS["NAD83 / Texas South Central (ftUS)",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",27.8333333333333],PARAMETER["central_meridian",-99],PARAMETER["standard_parallel_1",30.2833333333333],PARAMETER["standard_parallel_2",28.3833333333333],PARAMETER["false_easting",1968500],PARAMETER["false_northing",13123333.333],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2278"]],VERT_CS["NAVD88 height (ftUS)",VERT_DATUM["North American Vertical Datum 1988",2005,AUTHORITY["EPSG","5103"]],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Gravity-related height",UP],AUTHORITY["EPSG","6360"]]]</SourceSRS>
+            <TargetSRS>COMPD_CS["NAD83 / Texas Centric Albers Equal Area + NAVD88 height",PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]],VERT_CS["NAVD88 height",VERT_DATUM["North American Vertical Datum 1988",2005,AUTHORITY["EPSG","5103"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Gravity-related height",UP],AUTHORITY["EPSG","5703"]]]</TargetSRS>
+            <Options>
+              <Option key="AREA_OF_INTEREST">-97.69173390981867,28.810966696272,-94.78245195157942,30.53907362751481</Option>
+            </Options>
+          </ReprojectionTransformer>
+        </ReprojectTransformer>
+      </GenImgProjTransformer>
+    </Transformer>
+    <BandList>
+      <BandMapping src="1" dst="1">
+        <SrcNoDataReal>-9999</SrcNoDataReal>
+        <SrcNoDataImag>0</SrcNoDataImag>
+        <DstNoDataReal>-9999</DstNoDataReal>
+        <DstNoDataImag>0</DstNoDataImag>
+      </BandMapping>
+    </BandList>
+  </GDALWarpOptions>
+</VRTDataset>

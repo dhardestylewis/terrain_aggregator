@@ -1,0 +1,14 @@
+<VRTDataset rasterXSize="1164000" rasterYSize="1621412">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(2011) / UTM zone 14N",GEOGCS["NAD83(2011)",DATUM["NAD83_National_Spatial_Reference_System_2011",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","1116"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","6318"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","6343"]]</SRS>
+  <GeoTransform>  2.1000000000000000e+05,  5.0000000000000000e-01,  0.0000000000000000e+00,  3.7492061400000001e+06,  0.0000000000000000e+00, -5.0000000000000000e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-9999</NoDataValue>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">6343_Gray_32BF.csv.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1164000" RasterYSize="1621412" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="1164000" ySize="1621412" />
+      <DstRect xOff="0" yOff="0" xSize="1164000" ySize="1621412" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

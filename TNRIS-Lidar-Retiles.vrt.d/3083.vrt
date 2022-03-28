@@ -1,0 +1,149 @@
+<VRTDataset rasterXSize="4207855" rasterYSize="3968684">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]]</SRS>
+  <GeoTransform>  8.5515204351337044e+05,  3.0514299568079994e-01,  0.0000000000000000e+00,  8.0663732538367733e+06,  0.0000000000000000e+00, -3.0514299568079994e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-9999</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">2277_Undefined_16BSI.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5481" RasterYSize="11574" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5481" ySize="11574" />
+      <DstRect xOff="2702351.54244027" yOff="2229707.69501207" xSize="53962.110214744" ySize="113949.546364796" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">2277_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57314" RasterYSize="50521" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57314" ySize="50521" />
+      <DstRect xOff="2638941.71249155" yOff="2103308.74680274" xSize="560618.054398054" ySize="494172.187009179" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">2278_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="305063" RasterYSize="206015" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="305063" ySize="206015" />
+      <DstRect xOff="2844399.16152969" yOff="2232790.3387386" xSize="913528.724074235" ySize="616923.783251832" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">2279_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="391434" RasterYSize="410197" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="391434" ySize="410197" />
+      <DstRect xOff="1772985.22389326" yOff="2622108.49659626" xSize="1282600.20238958" ySize="1344080.36915444" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">26913_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="483943" RasterYSize="832015" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="483943" ySize="832015" />
+      <DstRect xOff="0" yOff="0" xSize="1586991.34817865" ySize="2728421.74916231" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">26914_Palette_8BUI.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1510" RasterYSize="1516" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="1510" ySize="1516" />
+      <DstRect xOff="2832082.64036635" yOff="1625534.99579924" xSize="4949.77446705592" ySize="4969.44244507071" />
+    </SimpleSource>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">26914_Palette_8BUI_CT.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1510" RasterYSize="1516" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="1510" ySize="1516" />
+      <DstRect xOff="2709538.96238219" yOff="1641380.07453864" xSize="4950.19392484052" ySize="4969.86356957498" />
+    </SimpleSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">26914_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="623054" RasterYSize="1192879" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="623054" ySize="1192879" />
+      <DstRect xOff="1459827.66859334" yOff="58703.8542271019" xSize="2042226.0591876" ySize="3909979.84004219" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">26914_Undefined_8BUI.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1510" RasterYSize="1516" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="1510" ySize="1516" />
+      <DstRect xOff="2946742.53947204" yOff="1831465.816673" xSize="4949.24938377887" ySize="4968.91527537004" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">26915_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="979158" RasterYSize="1363086" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="979157.911175723" ySize="1363086" />
+      <DstRect xOff="2603753.16496127" yOff="917104.652009524" xSize="1604101.83503873" ySize="2233070.6099184" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">32614_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="134056" RasterYSize="498880" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="134056" ySize="498880" />
+      <DstRect xOff="2429140.3441144" yOff="1039156.3916068" xSize="440181.965867112" ySize="1638106.3073028" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6342_Gray_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="434159" RasterYSize="364997" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="434159" ySize="364997" />
+      <DstRect xOff="98501.8640851029" yOff="1628333.8037455" xSize="1422517.05642613" ySize="1195908.54512832" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6342_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="185809" RasterYSize="210711" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="185809" ySize="210711" />
+      <DstRect xOff="915450.549932526" yOff="1026034.36402041" xSize="609045.709812993" ySize="690669.615359889" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6343_Gray_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1178167" RasterYSize="1632178" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="1178167" ySize="1632178" />
+      <DstRect xOff="1466785.88746985" yOff="1023337.14464278" xSize="1931376.02316468" ySize="2675638.89901592" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6343_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="581169" RasterYSize="646009" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="581169" ySize="646009" />
+      <DstRect xOff="1488902.30425288" yOff="809910.94516486" xSize="1905042.80398889" ySize="2117585.06864967" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6344_Gray_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="101147" RasterYSize="388463" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="101147" ySize="388463" />
+      <DstRect xOff="3305973.34867671" yOff="1419219.27725487" xSize="331932.473408251" ySize="1274812.74202487" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6344_Undefined_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5676" RasterYSize="19741" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5676" ySize="19741" />
+      <DstRect xOff="3386164.93154371" yOff="2865574.31460818" xSize="18607.0639403969" ySize="64714.9487750836" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">6578_Gray_32BF.csv.vrt-translated.vrt-warped.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="83875" RasterYSize="153034" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="83875" ySize="153034" />
+      <DstRect xOff="868338.189952627" yOff="2061613.8497791" xSize="83875" ySize="153034" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

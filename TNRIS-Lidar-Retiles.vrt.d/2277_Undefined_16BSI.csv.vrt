@@ -1,0 +1,1127 @@
+<VRTDataset rasterXSize="5467" rasterYSize="11550">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Central (ftUS)",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",29.6666666666667],PARAMETER["central_meridian",-100.333333333333],PARAMETER["standard_parallel_1",31.8833333333333],PARAMETER["standard_parallel_2",30.1166666666667],PARAMETER["false_easting",2296583.333],PARAMETER["false_northing",9842500],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2277"]]</SRS>
+  <GeoTransform>  2.9926826646226998e+06,  9.8425199999992401e+00,  0.0000000000000000e+00,  1.0181799390999816e+07,  0.0000000000000000e+00, -9.8425199999991388e+00</GeoTransform>
+  <VRTRasterBand dataType="Int16" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">1290</MDI>
+      <MDI key="STATISTICS_MEAN">905.68123341805</MDI>
+      <MDI key="STATISTICS_MINIMUM">643</MDI>
+      <MDI key="STATISTICS_STDDEV">153.85692579127</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">62.71</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3073.6294663727" yOff="9835.98316459855" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="584" />
+      <DstRect xOff="2001.27412540304" yOff="6393.10652053766" xSize="512" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="588" />
+      <DstRect xOff="4954.77737178174" yOff="4019.22282098555" xSize="512" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1058.7541766073" yOff="9299.76180620233" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="583" />
+      <DstRect xOff="3509.54642858768" yOff="6935.82823372498" xSize="508" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097333a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="588" />
+      <DstRect xOff="3969.70139530382" yOff="5195.08835135838" xSize="517" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="587" />
+      <DstRect xOff="2560.96402011095" yOff="9268.95776479636" xSize="513" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098322d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2871.15549445711" yOff="20.9833457271253" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="587" />
+      <DstRect xOff="2572.8095400408" yOff="9846.17768788327" xSize="513" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="2477.99661270105" yOff="5228.34311934143" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2882.53447867848" yOff="600.361779417843" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="588" />
+      <DstRect xOff="2549.08598824711" yOff="8691.65656187473" xSize="513" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="2513.41226873624" yOff="6956.19188034576" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097251c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="588" />
+      <DstRect xOff="3860.60047399564" yOff="0" xSize="516" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098323d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="577" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="577" />
+      <DstRect xOff="919.511659548667" yOff="2369.13900125558" xSize="511" ySize="577" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097413a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="587" />
+      <DstRect xOff="4066.65725620139" yOff="9813.15770758032" xSize="517" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="2906.36064626363" yOff="1754.69291381254" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2966.12469282283" yOff="4640.86263310397" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="591" />
+      <DstRect xOff="3932.62727288575" yOff="3461.6801892076" xSize="517" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1000.6482386788" yOff="6413.58903891694" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098322d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="3365.84232262744" yOff="10.6797852580979" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="584" />
+      <DstRect xOff="2418.47234165462" yOff="2338.46094359353" xSize="512" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097253a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="588" />
+      <DstRect xOff="3884.87433881837" yOff="1154.43605905801" xSize="516" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="3951.25083589451" yOff="4040.7538922956" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="977.366645987106" yOff="5259.07705688993" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="584" />
+      <DstRect xOff="3025.85419545227" yOff="7527.04454437108" xSize="508" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1465.80257348335" yOff="4671.7987542418" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="591" />
+      <DstRect xOff="4437.20639157895" yOff="3450.97766695519" xSize="517" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2954.70487602798" yOff="4063.5746381557" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="583" />
+      <DstRect xOff="930.994468215565" yOff="2950.2217484931" xSize="511" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="942.446796944395" yOff="3523.5839274189" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="2013.03734950007" yOff="6966.4626034757" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="591" />
+      <DstRect xOff="2537.11448457325" yOff="8110.61547055263" xSize="513" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1512.62382234241" yOff="6976.7841265022" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="587" />
+      <DstRect xOff="2083.7619817874" yOff="10433.7953338417" xSize="513" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="2024.8808374341" yOff="7547.69876640153" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097333a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="587" />
+      <DstRect xOff="3981.77553891758" yOff="5772.76662887259" xSize="517" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="592" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="592" />
+      <DstRect xOff="4941.88863406258" yOff="3440.2344031854" xSize="512" ySize="592" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3061.6935226266" yOff="9258.68196167673" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2894.41657453401" yOff="1177.48315070503" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="2978.04641259785" yOff="5218.06833221966" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="584" />
+      <DstRect xOff="4425.13450730905" yOff="2877.71343023036" xSize="516" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="591" />
+      <DstRect xOff="3037.68853940482" yOff="8100.50730709251" xSize="508" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097411c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="588" />
+      <DstRect xOff="4054.56888858831" yOff="9235.60338206202" xSize="517" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="583" />
+      <DstRect xOff="3013.81665191257" yOff="6945.99532506531" xSize="508" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1477.54446162379" yOff="5249.09081318209" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="584" />
+      <DstRect xOff="3497.61353283535" yOff="6362.21103931738" xSize="508" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="591" />
+      <DstRect xOff="530.160930710897" yOff="8151.51954743543" xSize="517" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="584" />
+      <DstRect xOff="3521.66423596428" yOff="7516.79922118961" xSize="508" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="3401.44018425999" yOff="1744.44251064138" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="587" />
+      <DstRect xOff="2584.6885879025" yOff="10423.4301229039" xSize="513" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="3425.42789551691" yOff="2898.92706072419" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3085.58573007753" yOff="10413.1451758029" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="584" />
+      <DstRect xOff="1906.99561297736" yOff="1775.26687200612" xSize="511" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="584" />
+      <DstRect xOff="2501.60230873415" yOff="6382.78499751096" xSize="512" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="584" />
+      <DstRect xOff="495.677960780443" yOff="6423.62709851977" xSize="516" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="591" />
+      <DstRect xOff="2942.14307755356" yOff="3482.66664256293" xSize="507" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3473.53946175402" yOff="5207.8199610446" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1559.48774311474" yOff="9289.68717067416" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1012.2397591248" yOff="6986.89940194812" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="583" />
+      <DstRect xOff="518.649674101845" yOff="7578.26201629691" xSize="517" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="3930.00366141696" yOff="2888.25064961864" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="586" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="586" />
+      <DstRect xOff="3449.4958706107" yOff="4054.62268034591" xSize="507" ySize="586" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="1895.20698893187" yOff="1198.05710889861" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="583" />
+      <DstRect xOff="3001.95995600542" yOff="6372.52646635633" xSize="508" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1977.67452535755" yOff="5238.75405018651" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097253a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="588" />
+      <DstRect xOff="3872.70215120796" yOff="577.244140729233" xSize="516" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1047.09153630586" yOff="8722.4951472107" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="2930.25590170839" yOff="2909.2333437818" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="583" />
+      <DstRect xOff="22.8853534968886" yOff="7588.41488366622" xSize="507" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1023.91560739946" yOff="7568.1315008823" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097411a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="591" />
+      <DstRect xOff="4018.00406575851" yOff="7496.61174170917" xSize="517" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="588" />
+      <DstRect xOff="2048.41541361173" yOff="8702.05123675268" xSize="512" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="2989.99556431712" yOff="5795.28825530656" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="1942.27817328303" yOff="3503.19792884323" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097411c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="588" />
+      <DstRect xOff="4042.5089689744" yOff="8658.43107253167" xSize="517" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3581.90986554493" yOff="10402.8510847208" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="1035.36082414272" yOff="8141.3798880391" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="591" />
+      <DstRect xOff="34.2472584094692" yOff="8161.72829469118" xSize="507" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097253c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="584" />
+      <DstRect xOff="3908.9757884469" yOff="2305.19521423544" xSize="516" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098323d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="583" />
+      <DstRect xOff="1418.91528475851" yOff="2358.98511788841" xSize="511" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="1883.39499693391" yOff="620.968249545504" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098323d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="584" />
+      <DstRect xOff="908.010562918908" yOff="1795.66303056118" xSize="511" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="588" />
+      <DstRect xOff="2072.01399765932" yOff="9856.51749887263" xSize="513" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="591" />
+      <DstRect xOff="3533.63167564636" yOff="8090.24877593768" xSize="508" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098322c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="588" />
+      <DstRect xOff="2371.66705044074" yOff="31.1757558024966" xSize="511" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="2525.36548444729" yOff="7537.38537135831" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="2036.54754172733" yOff="8120.93089759157" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="2383.00893371636" yOff="610.668062475452" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="591" />
+      <DstRect xOff="3437.40143118665" yOff="3472.4822792576" xSize="507" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097333c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="584" />
+      <DstRect xOff="3993.9878585269" yOff="6349.68189041143" xSize="517" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="583" />
+      <DstRect xOff="0" yOff="6433.79215786419" xSize="507" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="2442.22332539251" yOff="3492.8896137899" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1489.22843788191" yOff="5826.27009635125" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="584" />
+      <DstRect xOff="2406.65425366901" yOff="1764.96058894852" xSize="511" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098322c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="588" />
+      <DstRect xOff="1872.24657682232" yOff="41.5022778711465" xSize="511" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="2394.80873373911" yOff="1187.78232177703" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="3389.30612091644" yOff="1167.24290751325" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="584" />
+      <DstRect xOff="1918.80049298976" yOff="2348.69610679561" xSize="511" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097253c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="584" />
+      <DstRect xOff="3896.96433203138" yOff="1731.75619658308" xSize="516" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3461.47956625972" yOff="4630.67826979883" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097333c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="584" />
+      <DstRect xOff="4006.06505014025" yOff="6923.11938406226" xSize="517" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098321d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="587" />
+      <DstRect xOff="1372.8233600039" yOff="51.83855354184" xSize="511" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="1442.34318115294" yOff="3513.51741987401" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="583" />
+      <DstRect xOff="11.4005128341219" yOff="7007.30267248859" xSize="507" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097411a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="592" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="592" />
+      <DstRect xOff="4030.29969736458" yOff="8077.47619512117" xSize="517" ySize="592" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="516" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="516" ySize="584" />
+      <DstRect xOff="507.04392968476" yOff="6997.0207733814" xSize="516" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="2918.49267761126" yOff="2328.23289237705" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404a4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="588" />
+      <DstRect xOff="2489.75272481257" yOff="5805.53865847773" xSize="512" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402a1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="583" />
+      <DstRect xOff="1930.58403704556" yOff="2929.8194939505" xSize="511" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="513" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="513" ySize="588" />
+      <DstRect xOff="2060.18168570263" yOff="9279.27014384153" xSize="513" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401d3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="965.792397506048" yOff="4681.96279758835" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3557.76670660389" yOff="9248.42851051178" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331b1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="584" />
+      <DstRect xOff="4929.67430688217" yOff="2866.97301125471" xSize="512" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3049.75148289289" yOff="8681.43765463959" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1965.92958922328" yOff="4661.49856717193" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1524.35859849728" yOff="7558.03451339925" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1989.60742110982" yOff="5815.897773428" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401d1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="954.194781072436" yOff="4104.69613859672" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="583" />
+      <DstRect xOff="1430.73337274412" yOff="2940.09428107227" xSize="511" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097413c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="582.58504935586" />
+      <DstRect xOff="4090.85634342689" yOff="10967.4149506441" xSize="517" ySize="582.585049355923" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402a2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="584" />
+      <DstRect xOff="2430.38796544199" yOff="2919.55689880422" xSize="512" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097413a3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="588" />
+      <DstRect xOff="4078.82588781195" yOff="10390.2345131138" xSize="517" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324d4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="584" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="584" />
+      <DstRect xOff="3413.30094415893" yOff="2318.02922511081" xSize="507" ySize="584" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402c4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="2466.02307703132" yOff="4651.12014826075" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="591" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="591" />
+      <DstRect xOff="1535.96332691646" yOff="8131.22092468204" xSize="512" ySize="591" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098324b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="507" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="507" ySize="587" />
+      <DstRect xOff="3377.39049712907" yOff="590.028064416038" xSize="507" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098401d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1454.11453323349" yOff="4094.59508712203" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098484b2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3569.81034613119" yOff="9825.61998565663" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098481d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1547.77836690824" yOff="8712.36564779395" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="587" />
+      <DstRect xOff="4450.18809992835" yOff="4030.00156464043" xSize="517" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="583" />
+      <DstRect xOff="1500.93781408841" yOff="6403.4341395519" xSize="512" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098323d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="511" RasterYSize="583" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="511" ySize="583" />
+      <DstRect xOff="1407.36643622583" yOff="1785.66459487785" xSize="511" ySize="583" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402c2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="2454.14504516753" yOff="4074.20604055239" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098404b4.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3485.65218914088" yOff="5785.00838819529" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3097331c3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="517" RasterYSize="588" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="517" ySize="588" />
+      <DstRect xOff="3957.50939569396" yOff="4618.07860182165" xSize="517" ySize="588" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098402c1.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="1954.12674120671" yOff="4084.25121214083" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098482d2.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="508" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="508" ySize="587" />
+      <DstRect xOff="3545.7362750498" yOff="8671.15473953454" xSize="508" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/capcog-2007-140cm-caldwell-travis-williamson/dem/capcog07-3m_3098403b3.img</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="587" DataType="Int16" BlockXSize="64" BlockYSize="64" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="587" />
+      <DstRect xOff="988.969342410413" yOff="5836.37114782614" xSize="512" ySize="587" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

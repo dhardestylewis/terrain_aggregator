@@ -1,0 +1,22 @@
+<VRTDataset rasterXSize="5481" rasterYSize="11574">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]]</SRS>
+  <GeoTransform>  1.6797556885562260e+06,  3.0042254997599844e+00,  0.0000000000000000e+00,  7.3859935682882583e+06,  0.0000000000000000e+00, -3.0042254997599844e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1" blockXSize="512">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">400.20318603516</MDI>
+      <MDI key="STATISTICS_MEAN">274.21176520219</MDI>
+      <MDI key="STATISTICS_MINIMUM">195.98678588867</MDI>
+      <MDI key="STATISTICS_STDDEV">53.479571696354</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">62.7</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">2277_Undefined_16BSI.csv.vrt-translated.vrt-warped_compound.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5481" RasterYSize="11574" DataType="Float32" BlockXSize="512" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5481" ySize="11574" />
+      <DstRect xOff="0" yOff="0" xSize="5481" ySize="11574" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

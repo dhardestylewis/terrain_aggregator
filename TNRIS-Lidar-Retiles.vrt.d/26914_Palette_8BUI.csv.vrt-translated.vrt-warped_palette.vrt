@@ -1,0 +1,222 @@
+<VRTDataset rasterXSize="1510" rasterYSize="1516" subClass="VRTWarpedDataset">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]]</SRS>
+  <GeoTransform>  1.7193422244103490e+06,  1.0002576217362764e+00,  0.0000000000000000e+00,  7.5703526356346179e+06,  0.0000000000000000e+00, -1.0002576217362764e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1" subClass="VRTWarpedRasterBand">
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Palette</ColorInterp>
+    <ColorTable>
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="1" c2="1" c3="1" c4="255" />
+      <Entry c1="2" c2="2" c3="2" c4="255" />
+      <Entry c1="3" c2="3" c3="3" c4="255" />
+      <Entry c1="4" c2="4" c3="4" c4="255" />
+      <Entry c1="5" c2="5" c3="5" c4="255" />
+      <Entry c1="6" c2="6" c3="6" c4="255" />
+      <Entry c1="7" c2="7" c3="7" c4="255" />
+      <Entry c1="8" c2="8" c3="8" c4="255" />
+      <Entry c1="9" c2="9" c3="9" c4="255" />
+      <Entry c1="10" c2="10" c3="10" c4="255" />
+      <Entry c1="11" c2="11" c3="11" c4="255" />
+      <Entry c1="12" c2="12" c3="12" c4="255" />
+      <Entry c1="13" c2="13" c3="13" c4="255" />
+      <Entry c1="14" c2="14" c3="14" c4="255" />
+      <Entry c1="15" c2="15" c3="15" c4="255" />
+      <Entry c1="16" c2="16" c3="16" c4="255" />
+      <Entry c1="17" c2="17" c3="17" c4="255" />
+      <Entry c1="18" c2="18" c3="18" c4="255" />
+      <Entry c1="19" c2="19" c3="19" c4="255" />
+      <Entry c1="20" c2="20" c3="20" c4="255" />
+      <Entry c1="21" c2="21" c3="21" c4="255" />
+      <Entry c1="22" c2="22" c3="22" c4="255" />
+      <Entry c1="23" c2="23" c3="23" c4="255" />
+      <Entry c1="24" c2="24" c3="24" c4="255" />
+      <Entry c1="25" c2="25" c3="25" c4="255" />
+      <Entry c1="26" c2="26" c3="26" c4="255" />
+      <Entry c1="27" c2="27" c3="27" c4="255" />
+      <Entry c1="28" c2="28" c3="28" c4="255" />
+      <Entry c1="29" c2="29" c3="29" c4="255" />
+      <Entry c1="30" c2="30" c3="30" c4="255" />
+      <Entry c1="31" c2="31" c3="31" c4="255" />
+      <Entry c1="32" c2="32" c3="32" c4="255" />
+      <Entry c1="33" c2="33" c3="33" c4="255" />
+      <Entry c1="34" c2="34" c3="34" c4="255" />
+      <Entry c1="35" c2="35" c3="35" c4="255" />
+      <Entry c1="36" c2="36" c3="36" c4="255" />
+      <Entry c1="37" c2="37" c3="37" c4="255" />
+      <Entry c1="38" c2="38" c3="38" c4="255" />
+      <Entry c1="39" c2="39" c3="39" c4="255" />
+      <Entry c1="40" c2="40" c3="40" c4="255" />
+      <Entry c1="41" c2="41" c3="41" c4="255" />
+      <Entry c1="42" c2="42" c3="42" c4="255" />
+      <Entry c1="43" c2="43" c3="43" c4="255" />
+      <Entry c1="44" c2="44" c3="44" c4="255" />
+      <Entry c1="45" c2="45" c3="45" c4="255" />
+      <Entry c1="46" c2="46" c3="46" c4="255" />
+      <Entry c1="47" c2="47" c3="47" c4="255" />
+      <Entry c1="48" c2="48" c3="48" c4="255" />
+      <Entry c1="49" c2="49" c3="49" c4="255" />
+      <Entry c1="50" c2="50" c3="50" c4="255" />
+      <Entry c1="51" c2="51" c3="51" c4="255" />
+      <Entry c1="52" c2="52" c3="52" c4="255" />
+      <Entry c1="53" c2="53" c3="53" c4="255" />
+      <Entry c1="54" c2="54" c3="54" c4="255" />
+      <Entry c1="55" c2="55" c3="55" c4="255" />
+      <Entry c1="56" c2="56" c3="56" c4="255" />
+      <Entry c1="57" c2="57" c3="57" c4="255" />
+      <Entry c1="58" c2="58" c3="58" c4="255" />
+      <Entry c1="59" c2="59" c3="59" c4="255" />
+      <Entry c1="60" c2="60" c3="60" c4="255" />
+      <Entry c1="61" c2="61" c3="61" c4="255" />
+      <Entry c1="62" c2="62" c3="62" c4="255" />
+      <Entry c1="63" c2="63" c3="63" c4="255" />
+      <Entry c1="64" c2="64" c3="64" c4="255" />
+      <Entry c1="65" c2="65" c3="65" c4="255" />
+      <Entry c1="66" c2="66" c3="66" c4="255" />
+      <Entry c1="67" c2="67" c3="67" c4="255" />
+      <Entry c1="68" c2="68" c3="68" c4="255" />
+      <Entry c1="69" c2="69" c3="69" c4="255" />
+      <Entry c1="70" c2="70" c3="70" c4="255" />
+      <Entry c1="71" c2="71" c3="71" c4="255" />
+      <Entry c1="72" c2="72" c3="72" c4="255" />
+      <Entry c1="73" c2="73" c3="73" c4="255" />
+      <Entry c1="74" c2="74" c3="74" c4="255" />
+      <Entry c1="75" c2="75" c3="75" c4="255" />
+      <Entry c1="76" c2="76" c3="76" c4="255" />
+      <Entry c1="77" c2="77" c3="77" c4="255" />
+      <Entry c1="78" c2="78" c3="78" c4="255" />
+      <Entry c1="79" c2="79" c3="79" c4="255" />
+      <Entry c1="80" c2="80" c3="80" c4="255" />
+      <Entry c1="81" c2="81" c3="81" c4="255" />
+      <Entry c1="82" c2="82" c3="82" c4="255" />
+      <Entry c1="83" c2="83" c3="83" c4="255" />
+      <Entry c1="84" c2="84" c3="84" c4="255" />
+      <Entry c1="85" c2="85" c3="85" c4="255" />
+      <Entry c1="86" c2="86" c3="86" c4="255" />
+      <Entry c1="87" c2="87" c3="87" c4="255" />
+      <Entry c1="88" c2="88" c3="88" c4="255" />
+      <Entry c1="89" c2="89" c3="89" c4="255" />
+      <Entry c1="90" c2="90" c3="90" c4="255" />
+      <Entry c1="91" c2="91" c3="91" c4="255" />
+      <Entry c1="92" c2="92" c3="92" c4="255" />
+      <Entry c1="93" c2="93" c3="93" c4="255" />
+      <Entry c1="94" c2="94" c3="94" c4="255" />
+      <Entry c1="95" c2="95" c3="95" c4="255" />
+      <Entry c1="96" c2="96" c3="96" c4="255" />
+      <Entry c1="97" c2="97" c3="97" c4="255" />
+      <Entry c1="98" c2="98" c3="98" c4="255" />
+      <Entry c1="99" c2="99" c3="99" c4="255" />
+      <Entry c1="100" c2="100" c3="100" c4="255" />
+      <Entry c1="101" c2="101" c3="101" c4="255" />
+      <Entry c1="102" c2="102" c3="102" c4="255" />
+      <Entry c1="103" c2="103" c3="103" c4="255" />
+      <Entry c1="104" c2="104" c3="104" c4="255" />
+      <Entry c1="105" c2="105" c3="105" c4="255" />
+      <Entry c1="106" c2="106" c3="106" c4="255" />
+      <Entry c1="107" c2="107" c3="107" c4="255" />
+      <Entry c1="108" c2="108" c3="108" c4="255" />
+      <Entry c1="109" c2="109" c3="109" c4="255" />
+      <Entry c1="110" c2="110" c3="110" c4="255" />
+      <Entry c1="111" c2="111" c3="111" c4="255" />
+      <Entry c1="112" c2="112" c3="112" c4="255" />
+      <Entry c1="113" c2="113" c3="113" c4="255" />
+      <Entry c1="114" c2="114" c3="114" c4="255" />
+      <Entry c1="115" c2="115" c3="115" c4="255" />
+      <Entry c1="116" c2="116" c3="116" c4="255" />
+      <Entry c1="117" c2="117" c3="117" c4="255" />
+      <Entry c1="118" c2="118" c3="118" c4="255" />
+      <Entry c1="119" c2="119" c3="119" c4="255" />
+      <Entry c1="120" c2="120" c3="120" c4="255" />
+      <Entry c1="121" c2="121" c3="121" c4="255" />
+      <Entry c1="122" c2="122" c3="122" c4="255" />
+      <Entry c1="123" c2="123" c3="123" c4="255" />
+      <Entry c1="124" c2="124" c3="124" c4="255" />
+      <Entry c1="125" c2="125" c3="125" c4="255" />
+      <Entry c1="126" c2="126" c3="126" c4="255" />
+      <Entry c1="127" c2="127" c3="127" c4="255" />
+      <Entry c1="128" c2="128" c3="128" c4="255" />
+      <Entry c1="129" c2="129" c3="129" c4="255" />
+      <Entry c1="130" c2="130" c3="130" c4="255" />
+      <Entry c1="131" c2="131" c3="131" c4="255" />
+      <Entry c1="132" c2="132" c3="132" c4="255" />
+      <Entry c1="133" c2="133" c3="133" c4="255" />
+      <Entry c1="134" c2="134" c3="134" c4="255" />
+      <Entry c1="135" c2="135" c3="135" c4="255" />
+      <Entry c1="136" c2="136" c3="136" c4="255" />
+      <Entry c1="137" c2="137" c3="137" c4="255" />
+      <Entry c1="138" c2="138" c3="138" c4="255" />
+      <Entry c1="139" c2="139" c3="139" c4="255" />
+      <Entry c1="140" c2="140" c3="140" c4="255" />
+      <Entry c1="141" c2="141" c3="141" c4="255" />
+      <Entry c1="142" c2="142" c3="142" c4="255" />
+      <Entry c1="143" c2="143" c3="143" c4="255" />
+      <Entry c1="144" c2="144" c3="144" c4="255" />
+      <Entry c1="145" c2="145" c3="145" c4="255" />
+      <Entry c1="146" c2="146" c3="146" c4="255" />
+      <Entry c1="147" c2="147" c3="147" c4="255" />
+      <Entry c1="148" c2="148" c3="148" c4="255" />
+      <Entry c1="149" c2="149" c3="149" c4="255" />
+      <Entry c1="150" c2="150" c3="150" c4="255" />
+      <Entry c1="151" c2="151" c3="151" c4="255" />
+      <Entry c1="152" c2="152" c3="152" c4="255" />
+      <Entry c1="153" c2="153" c3="153" c4="255" />
+      <Entry c1="154" c2="154" c3="154" c4="255" />
+      <Entry c1="155" c2="155" c3="155" c4="255" />
+      <Entry c1="156" c2="156" c3="156" c4="255" />
+      <Entry c1="157" c2="157" c3="157" c4="255" />
+      <Entry c1="158" c2="158" c3="158" c4="255" />
+      <Entry c1="159" c2="159" c3="159" c4="255" />
+      <Entry c1="160" c2="160" c3="160" c4="255" />
+      <Entry c1="161" c2="161" c3="161" c4="255" />
+      <Entry c1="162" c2="162" c3="162" c4="255" />
+      <Entry c1="163" c2="163" c3="163" c4="255" />
+      <Entry c1="164" c2="164" c3="164" c4="255" />
+      <Entry c1="165" c2="165" c3="165" c4="255" />
+      <Entry c1="166" c2="166" c3="166" c4="255" />
+      <Entry c1="167" c2="167" c3="167" c4="255" />
+      <Entry c1="168" c2="168" c3="168" c4="255" />
+      <Entry c1="169" c2="169" c3="169" c4="255" />
+      <Entry c1="170" c2="170" c3="170" c4="255" />
+      <Entry c1="171" c2="171" c3="171" c4="255" />
+    </ColorTable>
+  </VRTRasterBand>
+  <BlockXSize>512</BlockXSize>
+  <BlockYSize>128</BlockYSize>
+  <GDALWarpOptions>
+    <WarpMemoryLimit>6.71089e+07</WarpMemoryLimit>
+    <ResampleAlg>NearestNeighbour</ResampleAlg>
+    <WorkingDataType>Float32</WorkingDataType>
+    <Option name="INIT_DEST">NO_DATA</Option>
+    <Option name="ERROR_OUT_IF_EMPTY_SOURCE_WINDOW">FALSE</Option>
+    <SourceDataset relativeToVRT="1">26914_Palette_8BUI.csv.vrt-translated.vrt</SourceDataset>
+    <Transformer>
+      <ApproxTransformer>
+        <MaxError>0.125</MaxError>
+        <BaseTransformer>
+          <GenImgProjTransformer>
+            <SrcGeoTransform>625500.010000000009,1,0,3566999.99000000022,0,-1</SrcGeoTransform>
+            <SrcInvGeoTransform>-625500.010000000009,1,0,3566999.99000000022,0,-1</SrcInvGeoTransform>
+            <DstGeoTransform>1719342.22441034904,1.00025762173627641,0,7570352.63563461788,0,-1.00025762173627641</DstGeoTransform>
+            <DstInvGeoTransform>-1718899.39856280689,0.999742444615588921,0,7568402.85055141989,0,-0.999742444615588921</DstInvGeoTransform>
+            <ReprojectTransformer>
+              <ReprojectionTransformer>
+                <SourceSRS>PROJCS["NAD83 / UTM zone 14N",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","26914"]]</SourceSRS>
+                <TargetSRS>PROJCS["NAD83 / Texas Centric Albers Equal Area",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",18],PARAMETER["longitude_of_center",-100],PARAMETER["standard_parallel_1",27.5],PARAMETER["standard_parallel_2",35],PARAMETER["false_easting",1500000],PARAMETER["false_northing",6000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3083"]]</TargetSRS>
+                <Options>
+                  <Option key="AREA_OF_INTEREST">-97.66820494414458,32.21893634000141,-97.6520911540683,32.23263359835319</Option>
+                </Options>
+              </ReprojectionTransformer>
+            </ReprojectTransformer>
+          </GenImgProjTransformer>
+        </BaseTransformer>
+      </ApproxTransformer>
+    </Transformer>
+    <BandList>
+      <BandMapping src="1" dst="1">
+        <SrcNoDataReal>-9999</SrcNoDataReal>
+        <SrcNoDataImag>0</SrcNoDataImag>
+        <DstNoDataReal>-9999</DstNoDataReal>
+        <DstNoDataImag>0</DstNoDataImag>
+      </BandMapping>
+    </BandList>
+  </GDALWarpOptions>
+</VRTDataset>

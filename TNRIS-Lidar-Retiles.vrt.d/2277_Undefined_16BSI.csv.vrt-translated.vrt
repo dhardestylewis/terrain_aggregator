@@ -1,0 +1,20 @@
+<VRTDataset rasterXSize="5467" rasterYSize="11550">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Texas Central (ftUS)",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",29.6666666666667],PARAMETER["central_meridian",-100.333333333333],PARAMETER["standard_parallel_1",31.8833333333333],PARAMETER["standard_parallel_2",30.1166666666667],PARAMETER["false_easting",2296583.333],PARAMETER["false_northing",9842500],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2277"]]</SRS>
+  <GeoTransform>  2.9926826646226998e+06,  9.8425199999992401e+00,  0.0000000000000000e+00,  1.0181799390999816e+07,  0.0000000000000000e+00, -9.8425199999991388e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">1290</MDI>
+      <MDI key="STATISTICS_MEAN">905.68123341805</MDI>
+      <MDI key="STATISTICS_MINIMUM">643</MDI>
+      <MDI key="STATISTICS_STDDEV">153.85692579127</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">2277_Undefined_16BSI.csv.vrt</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5467" RasterYSize="11550" DataType="Int16" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5467" ySize="11550" />
+      <DstRect xOff="0" yOff="0" xSize="5467" ySize="11550" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

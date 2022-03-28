@@ -1,0 +1,376 @@
+<VRTDataset rasterXSize="83629" rasterYSize="152618">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(2011) / Texas Central (ftUS)",GEOGCS["NAD83(2011)",DATUM["NAD83_National_Spatial_Reference_System_2011",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","1116"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","6318"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",29.6666666666667],PARAMETER["central_meridian",-100.333333333333],PARAMETER["standard_parallel_1",31.8833333333333],PARAMETER["standard_parallel_2",30.1166666666667],PARAMETER["false_easting",2296583.333],PARAMETER["false_northing",9842500],UNIT["US survey foot",0.304800609601219,AUTHORITY["EPSG","9003"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","6578"]]</SRS>
+  <GeoTransform>  1.1526473799999999e+06,  1.0000000000000000e+00,  0.0000000000000000e+00,  1.0344184939999999e+07,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003021c4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5413" RasterYSize="6172" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5413" ySize="6172" />
+      <DstRect xOff="38534.9300000002" yOff="16121.4199999999" xSize="5413" ySize="6172" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003021d3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5412" RasterYSize="6172" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5412" ySize="6172" />
+      <DstRect xOff="43430.9300000002" yOff="16275.629999999" xSize="5412" ySize="6172" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003023a2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5414" RasterYSize="6172" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5414" ySize="6172" />
+      <DstRect xOff="38354.8300000001" yOff="21801.3599999994" xSize="5414" ySize="6172" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003023b2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5412" RasterYSize="6171" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5412" ySize="6171" />
+      <DstRect xOff="48148.4500000002" yOff="22110.1399999987" xSize="5412" ySize="6171" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022d4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5408" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5408" ySize="6168" />
+      <DstRect xOff="67911.26" yOff="17040.3599999994" xSize="5408" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252d2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5433" RasterYSize="6174" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5433" ySize="6173.69000000134" />
+      <DstRect xOff="24564.1100000001" yOff="146444.309999999" xSize="5433" ySize="6173.69000000134" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003031a2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5404" RasterYSize="6167" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5404" ySize="6167" />
+      <DstRect xOff="78224.6900000002" yOff="300.339999999851" xSize="5404" ySize="6167" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003024b2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5409" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5409" ySize="6168" />
+      <DstRect xOff="67735.9500000002" yOff="22720.4499999993" xSize="5409" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003024a1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5411" RasterYSize="6170" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5411" ySize="6170" />
+      <DstRect xOff="53045.29" yOff="22264" xSize="5411" ySize="6170" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003024a2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5411" RasterYSize="6170" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5411" ySize="6170" />
+      <DstRect xOff="57942.1600000001" yOff="22416.1699999999" xSize="5411" ySize="6170" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003024b1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5410" RasterYSize="6169" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5410" ySize="6169" />
+      <DstRect xOff="62839.04" yOff="22568.6600000001" xSize="5410" ySize="6169" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003031c1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5407" RasterYSize="6170" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5407" ySize="6170" />
+      <DstRect xOff="72981.9000000001" yOff="11508.3099999987" xSize="5407" ySize="6170" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022b4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5407" RasterYSize="6167" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5407" ySize="6167" />
+      <DstRect xOff="68261.9600000002" yOff="5679.3200000003" xSize="5407" ySize="6167" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022c2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5409" RasterYSize="6172" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5409" ySize="6172" />
+      <DstRect xOff="58295.9700000002" yOff="11054.0700000003" xSize="5409" ySize="6172" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022c3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5411" RasterYSize="6170" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5411" ySize="6170" />
+      <DstRect xOff="53223" yOff="16583.9799999986" xSize="5411" ySize="6170" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003023b1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5413" RasterYSize="6172" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5413" ySize="6172" />
+      <DstRect xOff="43251.6300000001" yOff="21955.5899999999" xSize="5413" ySize="6172" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251b2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5434" RasterYSize="6177" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5434" ySize="6177" />
+      <DstRect xOff="5276.8600000001" yOff="134450.469999999" xSize="5434" ySize="6177" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022d2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5407" RasterYSize="6171" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5407" ySize="6171" />
+      <DstRect xOff="68086.5700000001" yOff="11357.25" xSize="5407" ySize="6171" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022d3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5409" RasterYSize="6169" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5409" ySize="6169" />
+      <DstRect xOff="63015.1500000001" yOff="16888.5899999999" xSize="5409" ySize="6169" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003031a3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5406" RasterYSize="6165" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5406" ySize="6165" />
+      <DstRect xOff="73156.4800000002" yOff="5830.75" xSize="5406" ySize="6165" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003031a4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5405" RasterYSize="6165" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5405" ySize="6165" />
+      <DstRect xOff="78051.05" yOff="5980.69999999925" xSize="5405" ySize="6165" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003173d3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5443" RasterYSize="6187" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5443" ySize="6187" />
+      <DstRect xOff="546.200000000186" yOff="128606.289999999" xSize="5443" ySize="6187" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003173d4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5443" RasterYSize="6187" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5443" ySize="6187" />
+      <DstRect xOff="5456.74000000022" yOff="128765.83" xSize="5443" ySize="6187" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022c4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5410" RasterYSize="6170" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5410" ySize="6170" />
+      <DstRect xOff="58119.0600000001" yOff="16736.129999999" xSize="5410" ySize="6170" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022d1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5408" RasterYSize="6171" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5408" ySize="6171" />
+      <DstRect xOff="63191.26" yOff="11206.5099999998" xSize="5408" ySize="6171" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003031a1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5405" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5405" ySize="6168" />
+      <DstRect xOff="73330.9300000002" yOff="150.009999999776" xSize="5405" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003021d4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5411" RasterYSize="6171" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5411" ySize="6171" />
+      <DstRect xOff="48326.9500000002" yOff="16430.1500000004" xSize="5411" ySize="6171" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022b2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5406" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5406" ySize="6168" />
+      <DstRect xOff="68437.2000000002" yOff="0" xSize="5406" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003022b3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5407" RasterYSize="6167" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5407" ySize="6167" />
+      <DstRect xOff="63367.4300000002" yOff="5527.99000000022" xSize="5407" ySize="6167" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251b3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5425" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5425" ySize="6168" />
+      <DstRect xOff="184.840000000084" yOff="139974.51" xSize="5425" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003174c3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5443" RasterYSize="6186" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5443" ySize="6186" />
+      <DstRect xOff="10368.5700000001" yOff="128925.68" xSize="5443" ySize="6186" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003174c4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5442" RasterYSize="6185" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5442" ySize="6185" />
+      <DstRect xOff="15280.4100000001" yOff="129084.84" xSize="5442" ySize="6185" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251b1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5433" RasterYSize="6177" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5433" ySize="6177" />
+      <DstRect xOff="366.360000000102" yOff="134290.9" xSize="5433" ySize="6177" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251b4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5435" RasterYSize="6177" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5435" ySize="6177" />
+      <DstRect xOff="5091.98000000021" yOff="140130.109999999" xSize="5435" ySize="6177" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251d1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5425" RasterYSize="6168" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5425" ySize="6168" />
+      <DstRect xOff="0" yOff="145654.119999999" xSize="5425" ySize="6168" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003251d2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5446" RasterYSize="6187" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5446" ySize="6187" />
+      <DstRect xOff="4902.10000000009" yOff="145804.74" xSize="5446" ySize="6187" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252a1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5434" RasterYSize="6176" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5434" ySize="6176" />
+      <DstRect xOff="10189.4800000002" yOff="134610.34" xSize="5434" ySize="6176" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252a2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5433" RasterYSize="6175" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5433" ySize="6175" />
+      <DstRect xOff="15102.1300000001" yOff="134769.529999999" xSize="5433" ySize="6175" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252a3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5434" RasterYSize="6176" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5434" ySize="6176" />
+      <DstRect xOff="10005.4000000001" yOff="140290.01" xSize="5434" ySize="6176" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252a4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5424" RasterYSize="6166" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5424" ySize="6166" />
+      <DstRect xOff="14923.8400000001" yOff="140453.27" xSize="5424" ySize="6166" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252b1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5432" RasterYSize="6175" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5432" ySize="6175" />
+      <DstRect xOff="20014.79" yOff="134927.029999999" xSize="5432" ySize="6175" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252b3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5433" RasterYSize="6175" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5433" ySize="6175" />
+      <DstRect xOff="19832.3100000001" yOff="140606.75" xSize="5433" ySize="6175" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252b4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5432" RasterYSize="6174" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5432" ySize="6174" />
+      <DstRect xOff="24745.79" yOff="140764.58" xSize="5432" ySize="6174" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252c1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5435" RasterYSize="6176" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5435" ySize="6176" />
+      <DstRect xOff="9821.32000000007" yOff="145969.67" xSize="5435" ySize="6176" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252c2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5434" RasterYSize="6175" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5434" ySize="6175" />
+      <DstRect xOff="14735.5600000001" yOff="146128.91" xSize="5434" ySize="6175" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/scratch/projects/tnris/tnris-lidardata/stratmap-2020-balmorhea-davis-mountains/35cm-lidar/dem/stratmap20-1ft_3003252d1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="5434" RasterYSize="6175" DataType="Float32" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="5434" ySize="6175" />
+      <DstRect xOff="19649.8200000001" yOff="146286.459999999" xSize="5434" ySize="6175" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
