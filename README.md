@@ -8,6 +8,33 @@ https://portal.tacc.utexas.edu/account-request
 Once you have a TACC account, submit a ticket at the following page and CC dhl@tacc.utexas.edu
 https://portal.tacc.utexas.edu/tacc-consulting
 
+# TNRIS Lidar availability
+Here is a Shapefile of the extent of each TNRIS Lidar tile:
+https://utexas.box.com/v/tnris-lidar-tiles-shp
+
+This shapefile is projected in NAD83 / Texas Centric Albers Equal Area (EPSG:3083):
+https://epsg.io/3083
+https://spatialreference.org/ref/epsg/nad83-texas-centric-albers-equal-area/
+
+Each tile has the following attributes:
+  - rast : a reference address to the raster tile on Stampede2
+  - filename : TRNIS Lidar tilename
+  - absolutepath : TNRIS Lidar tile absolute path on Stampede2
+  - project : TNRIS Lidar project parent directory name
+  - srid : corrected SRID/EPSG code of the tile
+  - srid_orig : originally found SRID/EPSG code of the tile
+  - pixeltype : datatype of the pixels of the tile (float, integer, etc)
+  - envelope : polygon of the extent of the tile projected in the corrected EPSG
+  - centroid : centroid of the envelope projected in the corrected EPSG
+  - centroid_albers : centroid of the envelope projected in EPSG:3083
+  - x : longitude of the centroid projected in EPSG:3083
+  - y : latitude of the centroid projected in EPSG:3083
+  - width : width of the tile in pixels
+  - height : height of the tile in pixels
+  - pixelwidth : width of each pixel in EPSG:3083 units (m)
+  - pixelheight : height of each pixel in EPSG:3083 units (m)
+  - colorinterp : color interpretation of the raster tile
+
 # Software requirements (on Stampede2)
    - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
    - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/main/gdal.yml`
