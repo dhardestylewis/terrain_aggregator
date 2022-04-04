@@ -160,6 +160,8 @@ From the command line:
 ##     - pixeltype : datatype of the pixels of the tile (float, integer, etc)
 ##     - width : width of the tile in pixels
 ##     - height : height of the tile in pixels
+##     - pixelwidth : width of each pixel in EPSG:3083 (m)
+##     - pixelheight : height of each pixel in EPSG:3083 (m)
 psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update1.sql
 ```
 
@@ -180,8 +182,9 @@ From the command line:
 ##     - centroid : centroid of the envelope
 ##     - centroid_albers : centroid reprojected to NAD83(2011) / Texas Centric Albers Equal Area
 ##     - x : latitudinal coordinate of the centroid in original projection
-##     - y : longitudinal cooridnate of the centroid in the orignal projection
+##     - y : longitudinal coordinate of the centroid in the orignal projection
 psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update2.sql
+## It is necessary to set the `colorinterp` attribute separately
 ```
 
 From the PostgreSQL database:
