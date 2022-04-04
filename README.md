@@ -3,17 +3,22 @@
 @TACC now hosts TNRIS Lidar tiles for TACC users.
 
 To begin using TACC resources, please create a TACC account at the following page:
+
 https://portal.tacc.utexas.edu/account-request
 
 Once you have a TACC account, submit a ticket at the following page and CC dhl@tacc.utexas.edu
+
 https://portal.tacc.utexas.edu/tacc-consulting
 
 # TNRIS Lidar availability
 Here is a Shapefile of the extent of each TNRIS Lidar tile:
+
 https://utexas.box.com/v/tnris-lidar-tiles-shp
 
 This shapefile is projected in NAD83 / Texas Centric Albers Equal Area (EPSG:3083):
+
 https://epsg.io/3083
+
 https://spatialreference.org/ref/epsg/nad83-texas-centric-albers-equal-area/
 
 Each tile has the following attributes:
@@ -70,6 +75,7 @@ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata si
 for filename in $(ls ${TNRIS_LIDAR_POSTGRESQL}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
+
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
 
 https://portal.tacc.utexas.edu/tacc-consulting
@@ -91,7 +97,9 @@ export TNRIS_LIDAR_DATA=$(pwd)
 cd ..
 aws s3 cp s3://tnris-public-data/production-data/ tnris-lidardata --recursive
 ```
+
 For reference, TNRIS's AWS S3 bucket of their Lidar data can be publicly accessed at the following URL:
+
 https://s3.console.aws.amazon.com/s3/buckets/tnris-public-data?region=us-east-1&prefix=production-data/
 
 From the parent directory of TNRIS Lidar data, on the command line:
