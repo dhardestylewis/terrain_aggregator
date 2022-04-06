@@ -10,6 +10,12 @@ Once you have a TACC account, submit a ticket at the following page and CC dhl@t
 
 https://portal.tacc.utexas.edu/tacc-consulting
 
+# Intermediate retiling results
+Intermediate retiling results are available on Stampede2 at
+```bash
+/scratch/04950/dhl/TNRIS-Lidar-retiling
+```
+
 # TNRIS Lidar availability
 Here is a Shapefile of the extent of each TNRIS Lidar tile:
 
