@@ -13,7 +13,7 @@ https://portal.tacc.utexas.edu/tacc-consulting
 # Intermediate retiling results
 Intermediate retiling results are available on Stampede2 at
 ```bash
-/scratch/04950/dhl/TNRIS-Lidar-retiling
+/scratch/04950/dhl/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
 ```
 
 # TNRIS Lidar availability
