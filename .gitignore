@@ -1,4 +1,6 @@
 tnris_lidar_tiles.shp.d/
+symlink_tile_subgrids.d/base_tiles.txt.d/base_tiles.txt
+symlink_tile_subgrids.d/zoom_tiles.txt.d/zoom_tiles.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
