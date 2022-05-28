@@ -1,3 +1,11 @@
+# The terrain aggregator
+
+
+The workflow below aggregates terrain tiles from a variety of raster DEM tilesets to a single uniform projection.
+
+Aggregation on a small-country scale takes at most 15 days compute time back-to-front, or about 3000 node-hours of computational time.
+
+
 # TNRIS Lidar DEM tiles at TACC
 
 @TACC now hosts TNRIS Lidar tiles for TACC users.
