@@ -276,7 +276,7 @@ for huc in $(seq 0 $(( ${NUMBER_OF_HUCS} - 1)) ); do gdalwarp -multi -cutline HU
 
 
 
-LICENSE for this documentation:
+# LICENSE for this documentation:
 
 https://www.gnu.org/licenses/fdl-1.3.en.html
 
