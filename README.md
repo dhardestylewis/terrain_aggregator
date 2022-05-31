@@ -19,9 +19,14 @@ Once you have a TACC account, submit a ticket at the following page and CC dhl@t
 https://portal.tacc.utexas.edu/tacc-consulting
 
 # Intermediate retiling results
-Intermediate retiling results are available on Stampede2 at
+Intermediate retiling results are available :
+- on Stampede2 at :
 ```bash
-/scratch/04950/dhl/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
+stampede2.tacc.utexas.edu:/scratch/04950/dhl/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
+```
+- and on Corral at :
+```bash
+data.tacc.utexas.edu:/corral/projects/TDIS/TNRIS-Lidar-retiling/TX_scale
 ```
 
 # TNRIS Lidar availability
