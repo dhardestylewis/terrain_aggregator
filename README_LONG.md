@@ -13,7 +13,7 @@ Aggregation on a small-country scale takes at most 15 days compute time back-to-
 # Typical engineering analysis workflow using terrain data
 
 
-The current typical engineering analysis using terrain data involves some very common preprocessing steps, detailed below.
+The typical engineering analysis in 2022 using terrain data involves some very common preprocessing steps, detailed below.
 Because of significant differences in Lidar data product standards and metadata quality, these steps can be prone to error and headache.
 
 1. **determining available raster imagery** from different data hubs, usually (from a Texas point-of-view) :
