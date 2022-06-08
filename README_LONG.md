@@ -14,35 +14,49 @@ Aggregation on a small-country scale takes at most 15 days compute time back-to-
 
 
 The current typical engineering analysis using terrain data involves some very common preprocessing steps including :
+
 1. determining available raster imagery from different data hubs, usually (from a Texas point-of-view) :
+
     - TNRIS's Data Hub : https://data.tnris.org/ : all available raster imagery organized by collection in Texas
     - USGS's National Map Downloader : https://apps.nationalmap.gov/downloader/ :  highest quality raster imagery organized by resolution across the U.S.
     - NOAA's Digital Coast : https://coast.noaa.gov/digitalcoast/data/ : raster imagery organized by project along U.S. coast
+
 2. reviewing characteristics of available raster imagery in a study area, usually :
+
     - resolution : pixel width by pixel height, usually in meters
     - year : when imagery was collected
     - quality : data quality levels as determined by an authority, such as the USGS's Topographic Data Quality Levels (QLs) :
 https://www.usgs.gov/3d-elevation-program/topographic-data-quality-levels-qls
+
 3. selecting source imagery tiles from projects based on these characteristics
+
 4. aggregating the disparate raster imagery by some combination of the following steps :
+
     - transforming, to unify characteristics from this table :
+
     | characteristic | description |
     | --------- | ----------- |
     | [spatial reference system](https://en.wikipedia.org/wiki/Spatial_reference_system) | projection + datum including unit of measurement (e.g. [NAD83 / UTM zone 14N](https://epsg.io/26914) + [NAVD88 height (m)](https://epsg.io/5703) |
     | [pixeltype](https://en.wikipedia.org/wiki/Data_type) | data type of the pixels of the tile (*e.g.* float, integer, *etc.*) |
     | [colorinterp](https://rasterio.readthedocs.io/en/latest/topics/color.html) | human interpretation of color (*e.g.* black, RGB, *etc.*) |
+
     - mosaicking, to unify characteristics from this table :
+
     | characteristic | description |
     | --------- | ----------- |
     | [geographic extent](https://en.wikipedia.org/wiki/Map_extent) | boundary box |
     | [pixelwidth](https://en.wikipedia.org/wiki/Spatial_resolution) | width of spatial resolution (usually in meters) |
     | [pixelheight](https://en.wikipedia.org/wiki/Spatial_resolution) | height of spatial resolution (usually in meters) |
+
     - retiling, to unify characteristics from this table :
+
     | characteristic | description |
     | --------- | ----------- |
     | [width](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | width of each tile (in pixels) |
     | [height](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | height of each tile (in pixels) |
+
 5. cropping uniform dataset to some bounding unit of analysis, usually one of the following :
+
     - watershed - a natural boundary
     - county - a political boundary
     - tile - a simple boundary
