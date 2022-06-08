@@ -25,7 +25,7 @@ The current typical engineering analysis using terrain data involves some very c
 
     - resolution : pixel width by pixel height, usually in meters
     - year : when imagery was collected
-    - quality : data quality levels as determined by an authority, such as the USGS's Topographic Data Quality Levels (QLs) :
+    - quality : data quality levels, such as the USGS's Topographic Data Quality Levels (QLs) :
 https://www.usgs.gov/3d-elevation-program/topographic-data-quality-levels-qls
 
 3. selecting source imagery tiles from projects based on these characteristics
