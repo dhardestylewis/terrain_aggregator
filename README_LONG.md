@@ -17,16 +17,15 @@ The current typical engineering analysis using terrain data involves some very c
 
 1. determining available raster imagery from different data hubs, usually (from a Texas point-of-view) :
 
-    - TNRIS's Data Hub : https://data.tnris.org/ : all available raster imagery organized by collection in Texas
-    - USGS's National Map Downloader : https://apps.nationalmap.gov/downloader/ :  highest quality raster imagery organized by resolution across the U.S.
-    - NOAA's Digital Coast : https://coast.noaa.gov/digitalcoast/data/ : raster imagery organized by project along U.S. coast
+    - TNRIS's [Data Hub](https://data.tnris.org/) : all available raster imagery organized by collection in Texas
+    - USGS's [National Map Downloader](https://apps.nationalmap.gov/downloader/) :  highest quality raster imagery organized by resolution across the U.S.
+    - NOAA's [Digital Coast](https://coast.noaa.gov/digitalcoast/data/) : raster imagery organized by project along U.S. coast
 
 2. reviewing characteristics of available raster imagery in a study area, usually :
 
     - resolution : pixel width by pixel height, usually in meters
     - year : when imagery was collected
-    - quality : data quality levels, such as the USGS's Topographic Data Quality Levels (QLs) :
-https://www.usgs.gov/3d-elevation-program/topographic-data-quality-levels-qls
+    - quality : data quality levels, such as the USGS's [Topographic Data Quality Levels (QLs)](https://www.usgs.gov/3d-elevation-program/topographic-data-quality-levels-qls)
 
 3. selecting source imagery tiles from projects based on these characteristics
 
