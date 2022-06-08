@@ -10,7 +10,7 @@ The workflow below aggregates terrain tiles from a variety of raster DEM tileset
 Aggregation on a small-country scale takes at most 15 days compute time back-to-front, or about 3000 node-hours of computational time.
 
 
-# Typical engineering analysis workflow using terrain data
+# Typical engineering workflow using terrain data
 
 
 The typical engineering analysis in 2022 using terrain data involves some very common preprocessing steps, detailed below.
