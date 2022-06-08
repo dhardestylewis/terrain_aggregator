@@ -10,16 +10,18 @@ The workflow below aggregates terrain tiles from a variety of raster DEM tileset
 Aggregation on a small-country scale takes at most 15 days compute time back-to-front, or about 3000 node-hours of computational time.
 
 
-# Typical engineering analysis using terrain data
+# Typical engineering analysis workflow using terrain data
 
 
-The current typical engineering analysis using terrain data involves some very common preprocessing steps including :
+The current typical engineering analysis using terrain data involves some very common preprocessing steps, detailed below.
+Because of significant differences in Lidar data product standards and metadata quality, these steps can be prone to error and headache.
 
 1. **determining available raster imagery** from different data hubs, usually (from a Texas point-of-view) :
 
     - TNRIS's [Data Hub](https://data.tnris.org/) : all available raster imagery organized by collection in Texas
     - USGS's [National Map Downloader](https://apps.nationalmap.gov/downloader/) :  highest quality raster imagery organized by resolution across the U.S.
     - NOAA's [Digital Coast](https://coast.noaa.gov/digitalcoast/data/) : raster imagery organized by project along U.S. coast
+    - *In practice, in Texas this means downloading individual tiles from TNRIS's Data Hub.*
 
 2. **reviewing characteristics** of available raster imagery in a study area, usually :
 
@@ -29,13 +31,15 @@ The current typical engineering analysis using terrain data involves some very c
 
 3. **selecting source imagery tiles** from projects based on these characteristics
 
+    - *In practice, in Texas this means selecting the highest resolution data first, then the most recent year.*
+
 4. **aggregating disparate raster imagery** by some combination of the following steps :
 
     - **transforming**, to unify characteristics from this table :
 
     | characteristic | description |
     | --------- | ----------- |
-    | [spatial reference system](https://en.wikipedia.org/wiki/Spatial_reference_system) | projection + datum including unit of measurement (*e.g.* [NAD83 / UTM zone 14N](https://epsg.io/26914) + [NAVD88 height (m)](https://epsg.io/5703) |
+    | [spatial reference system](https://en.wikipedia.org/wiki/Spatial_reference_system) | projection + datum including unit of measurement (*e.g.* [NAD83 / UTM zone 14N](https://epsg.io/26914) + [NAVD88 height (m)](https://epsg.io/5703)) |
     | [pixeltype](https://en.wikipedia.org/wiki/Data_type) | data type of the pixels of the tile (*e.g.* float, integer, *etc.*) |
     | [colorinterp](https://rasterio.readthedocs.io/en/latest/topics/color.html) | human interpretation of color (*e.g.* black, RGB, *etc.*) |
 
@@ -54,13 +58,53 @@ The current typical engineering analysis using terrain data involves some very c
     | [width](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | width of each tile (in pixels) |
     | [height](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | height of each tile (in pixels) |
 
+    - *In practice, transforming & mosaicking must be done in a certain order in order to prevent common raster transformation issues.*
+
 5. **cropping uniform dataset** to some bounding unit of analysis, usually one of the following :
 
     - **watershed** - a natural boundary
     - **county** - a political boundary
     - **tile** - a simple boundary
     - tile-delineated watershed - a simplified natural boundary
-    - tile-delineated county - a simplified political boundary 
+    - tile-delineated county - a simplified political boundary
+    - *In practice, usually a tile-delineated watershed is taken.*
+
+6. **applying domain-specific engineering analysis**, such as :
+
+    - [Height Above Nearest Drainage (HAND)](https://nhess.copernicus.org/articles/19/2405/2019/#:~:text=2.1%20Height%20Above%20Nearest%20Drainage,of%20a%20region's%20river%20network.)
+    - [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/)
+    - *etc.*
+    - *In practice, for flood modelling HEC-RAS is the gold standard and by far the most commonly used.*
+
+
+# Simplifying this workflow
+
+The `terrain_aggregator` produces a single, uniform, and seamless terrain dataset at the highest available resolution and the best available year.
+This enables engineers to skip steps 1.-4. above and begin immediately upscaling terrain data to their preferred resolution and cropping it to their study areas.
+
+Here is the new, simpler workflow starting from the `single_seamless_elevation` product that the `terrain_aggregator` produces :
+
+1. **determine `single_seamless_elevation` coverage** from a single data hub *!*
+
+    - TNRIS/TDIS's [Terrain Data Downloader](https://agis-sec-green2.csr.utexas.edu/lidar/lidar_downloads.html) : in-development elevation data organized by tile in Texas
+    - *The `single_seamless_elevation` is in development; availabity & coverage may vary*
+
+3. **select terrain tiles** by coverage *!*
+
+    - No need to familiarize yourself with minutia about each raster collection!
+    - No need to worry about upstream metadata issues!
+
+2. **mosaic selected tiles** to your preferred resolution *!*
+
+    - Because tiles are served out at a single, highest available resolution, you can choose to :
+        - use the highest-resolution data available, or
+        - upscale to a common resolution of analysis, such as 1-meter
+
+5. **crop uniform dataset** to your study area *!*
+
+    - No need if you use tile-delineated boundaries!
+
+6. **apply domain-specific engineering analysis** *!*
 
 
 # TNRIS Lidar DEM tiles at TACC
