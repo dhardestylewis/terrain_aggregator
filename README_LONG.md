@@ -80,7 +80,7 @@ Because of significant differences in Lidar data product standards and metadata 
 # Simplifying this workflow
 
 The `terrain_aggregator` produces a single, uniform, and seamless terrain dataset at the highest available resolution and the best available year.
-This enables engineers to skip steps 1.-4. above and begin immediately upscaling terrain data to their preferred resolution and cropping it to their study areas.
+This greatly simplifies steps 1.-4. above, enabling engineers to far more rapidly work directly with the data they need.
 
 Here is the new, simpler workflow starting from the `single_seamless_elevation` product that the `terrain_aggregator` produces :
 
