@@ -58,7 +58,7 @@ Because of significant differences in Lidar data product standards and metadata 
     | [width](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | width of each tile (in pixels) |
     | [height](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | height of each tile (in pixels) |
 
-    - *In practice, transforming & mosaicking must be done in a certain order in order to prevent common raster transformation issues.*
+    - *In practice, transforming & mosaicking must be done in a very careful order to prevent common raster transformation issues.*
 
 5. **cropping uniform dataset** to some bounding unit of analysis, usually one of the following :
 
