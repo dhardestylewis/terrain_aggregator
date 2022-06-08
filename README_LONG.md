@@ -104,7 +104,7 @@ Here is the new, simpler workflow starting from the `single_seamless_elevation` 
 
     - No need if you use tile-delineated boundaries!
 
-6. **apply domain-specific engineering analysis** *!*
+6. **apply your engineering analysis** *!*
 
 
 # TNRIS Lidar DEM tiles at TACC
