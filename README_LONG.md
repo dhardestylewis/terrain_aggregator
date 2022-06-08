@@ -18,9 +18,9 @@ Because of significant differences in Lidar data product standards and metadata 
 
 1. **determining available raster imagery** from different data hubs, usually (from a Texas point-of-view) :
 
-    - TNRIS's [Data Hub](https://data.tnris.org/) : all available raster imagery organized by collection in Texas
-    - USGS's [National Map Downloader](https://apps.nationalmap.gov/downloader/) :  highest quality raster imagery organized by resolution across the U.S.
-    - NOAA's [Digital Coast](https://coast.noaa.gov/digitalcoast/data/) : raster imagery organized by project along U.S. coast
+    - [TNRIS](https://tnris.org/)'s [Data Hub](https://data.tnris.org/) : all available raster imagery organized by collection in Texas
+    - [USGS](https://www.usgs.gov/)'s [National Map Downloader](https://apps.nationalmap.gov/downloader/) :  highest quality raster imagery organized by resolution across the U.S.
+    - [NOAA](https://www.noaa.gov/)'s [Digital Coast](https://coast.noaa.gov/digitalcoast/data/) : raster imagery organized by project along U.S. coast
     - *In practice, in Texas this means downloading individual tiles from TNRIS's Data Hub.*
 
 2. **reviewing characteristics** of available raster imagery in a study area, usually :
@@ -86,7 +86,7 @@ Here is the new, simpler workflow starting from the `single_seamless_elevation` 
 
 1. **determine `single_seamless_elevation` coverage** from a single data hub *!*
 
-    - TNRIS/TDIS's [Terrain Data Downloader](https://agis-sec-green2.csr.utexas.edu/lidar/lidar_downloads.html) : in-development elevation data organized by tile in Texas
+    - [TNRIS](https://tnris.org/)/[TDIS](https://idrt.tamug.edu/tdis/)'s [Terrain Data Downloader](https://agis-sec-green2.csr.utexas.edu/lidar/lidar_downloads.html) : in-development elevation data organized by tile in Texas
     - *The `single_seamless_elevation` is in development; availabity & coverage may vary*
 
 3. **select terrain tiles** by coverage *!*
