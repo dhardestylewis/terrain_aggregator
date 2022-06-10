@@ -286,11 +286,14 @@ for huc in $(seq 0 $(( ${NUMBER_OF_HUCS} - 1)) ); do gdalwarp -multi -cutline HU
 2) libfabric/1.7.0   4) git/2.24.1    6) python2/2.7.15   8) xalt/2.10.2
 ```
 
+
+# LICENSE for this documentation
+
 <details>
-   <summary># LICENSE for this documentation:</summary>
+   <summary>GNU Free Documentation License 1.3</summary>
+
 
 https://www.gnu.org/licenses/fdl-1.3.en.html
-
 
 
 Copyright (C)  2022  Daniel Hardesty Lewis.
