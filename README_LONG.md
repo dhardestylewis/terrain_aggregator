@@ -174,8 +174,8 @@ Each tile has the following attributes:
 
 This Singularity image includes support for the following 3 PostgreSQL - GDAL/OGR translators:
    - [`raster2pgsql`](https://postgis.net/docs/using_raster_dataman.html#RT_Raster_Loader) : to create a PostgreSQL script to add rasters to a PostgreSQL table
-   - `shp2pgsql` : to create a PostgreSQL script to add features from a Shapefile to a PostgreSQL table
-   - `pgsql2shp` : to create a Shapefile from an existing PostgreSQL table
+   - [`shp2pgsql`](https://postgis.net/docs/using_postgis_dbmanagement.html#shp2pgsql_usage) : to create a PostgreSQL script to add features from a Shapefile to a PostgreSQL table
+   - [`pgsql2shp`](https://postgis.net/docs/manual-dev/using_postgis_dbmanagement.html#pgsql2shp-usage) : to create a Shapefile from an existing PostgreSQL table
 
 To download this Singularity image, use the following commands from Stampede2:
 ```bash
@@ -184,21 +184,21 @@ idev
 ## to load the pre-existing Singularity module from TACC's module repository
 module load tacc-singularity
 ## to download this Singularity image from the online Docker Hub image repository
-singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr $SCRATCH/postgis_14-3.2-gdalogr.sif
+singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr $WORK/postgis_14-3.2-gdalogr.sif
 ```
 
 To clone this Git repository, use the following commands from Stampede2:
 ```bash
-git clone https://github.com/dhardestylewis/TNRIS-Lidar-PostgreSQL.git
-cd TNRIS-Lidar-PostgreSQL
-export TNRIS_LIDAR_POSTGRESQL=$(pwd)
+git clone https://github.com/dhardestylewis/terrain_aggregator.git
+cd terrain_aggregator
+export TERRAIN_AGGREGATOR=$(pwd)
 ```
 
-To connect to the existing TNRIS Lidar PostgreSQL database, use the following command:
+To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands:
 ```bash
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity run --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif &
-for filename in $(ls ${TNRIS_LIDAR_POSTGRESQL}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
+for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
@@ -237,14 +237,14 @@ mv $WORK/find_dem_tiles-sorted.csv $WORK/find_dem_tiles.csv
 From the PostgreSQL database:
 ```sql
 /* replace the following CSV path with your equivalent */
-COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO '$SCRATCH/select_all_dem_tiles.csv' (FORMAT csv) ;
+COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO current_setting('custom.scratch')||'/select_all_dem_tiles.csv' (FORMAT csv) ;
 ```
 
 ```bash
 comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
 
 ## Run raster2pgsql from the Singularity image
-SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$SCRATCH/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $SCRATCH/postgis_14-3.2-gdalogr.sif bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif bash
 ```
 ```bash
 ## From the Singularity container connected to the database
@@ -329,9 +329,9 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 # Retiling workflow
 
 PostgreSQL:
-```sqlthe
+```sql
 /* Replace with your preferred location below */
-COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO '/scratch/04950/dhl/distinct_srid.csv' (FORMAT csv) ;
+COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO current_setting('custom.scratch')||'/distinct_srid.csv' (FORMAT csv) ;
 ```
 
 Create and activate the Conda environment from the command line:
