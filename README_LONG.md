@@ -173,7 +173,7 @@ Each tile has the following attributes:
 ## Singularity download and usage
 
 This Singularity image includes support for the following 3 PostgreSQL - GDAL/OGR translators:
-   - `raster2pgsql` : to create a PostgreSQL script to add rasters to a PostgreSQL table
+   - [`raster2pgsql`](https://postgis.net/docs/using_raster_dataman.html#RT_Raster_Loader) : to create a PostgreSQL script to add rasters to a PostgreSQL table
    - `shp2pgsql` : to create a PostgreSQL script to add features from a Shapefile to a PostgreSQL table
    - `pgsql2shp` : to create a Shapefile from an existing PostgreSQL table
 
