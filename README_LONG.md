@@ -197,7 +197,7 @@ export TERRAIN_AGGREGATOR=$(pwd)
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands:
 ```bash
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
-for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
+for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 
