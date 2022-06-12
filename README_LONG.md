@@ -149,7 +149,7 @@ Each tile has the following attributes:
 | [rast](https://postgis.net/docs/raster.html) | a reference address to the raster tile on Stampede2 |
 | [filename](https://en.wikipedia.org/wiki/Filename) | TRNIS Lidar tilename |
 | [absolutepath](https://en.wikipedia.org/wiki/Path_(computing)#Absolute_and_relative_paths) | TNRIS Lidar tile absolute path on Stampede2 |
-| project | TNRIS Lidar project parent directory name |
+| [project](https://data.tnris.org/collection/447db89a-58ee-4a1b-a61f-b918af2fb0bb) | TNRIS Lidar project parent directory name |
 | [srid](https://en.wikipedia.org/wiki/Spatial_reference_system#Identifiers) | corrected SRID/EPSG code of the tile |
 | [srid_orig](https://postgis.net/docs/ST_SRID.html) | originally found SRID/EPSG code of the tile |
 | [pixeltype](https://postgis.net/docs/RT_ST_BandPixelType.html) | datatype of the pixels of the tile (float, integer, etc) |
@@ -166,9 +166,9 @@ Each tile has the following attributes:
 
 # Software requirements (on Stampede2)
 
-   - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
-   - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/terrain_aggregator/main/gdal.yml`
-   - AWS CLI : `https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
+   - [Singularity](https://containers-at-tacc.readthedocs.io/en/latest/singularity/01.singularity_basics.html) & [dhardestylewis's PostGIS-GDAL/OGR Singularity image](https://hub.docker.com/r/dhardestylewis/postgis)
+   - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) & [dhardestylewis's GDAL/OGR Conda environment](https://raw.githubusercontent.com/dhardestylewis/terrain_aggregator/main/gdal.yml)
+   - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ## Singularity download and usage
 
