@@ -177,7 +177,7 @@ This Singularity image includes support for the following 3 PostgreSQL - GDAL/OG
    - [`shp2pgsql`](https://postgis.net/docs/using_postgis_dbmanagement.html#shp2pgsql_usage) : to create a PostgreSQL script to add features from a Shapefile to a PostgreSQL table
    - [`pgsql2shp`](https://postgis.net/docs/manual-dev/using_postgis_dbmanagement.html#pgsql2shp-usage) : to create a Shapefile from an existing PostgreSQL table
 
-To download this Singularity image, use the following commands from Stampede2:
+To download this Singularity image, use the following commands from the Stampede2 command line:
 ```bash
 ## to enter a computational node: Singularity cannot be used from a development node
 idev
@@ -187,14 +187,14 @@ module load tacc-singularity
 singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr $WORK/postgis_14-3.2-gdalogr.sif
 ```
 
-To clone this Git repository, use the following commands from Stampede2:
+To clone this Git repository, use the following commands from the Stampede2 command line:
 ```bash
 git clone https://github.com/dhardestylewis/terrain_aggregator.git
 cd terrain_aggregator
 export TERRAIN_AGGREGATOR=$(pwd)
 ```
 
-To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands:
+To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
 ```bash
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
 for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
@@ -214,6 +214,7 @@ LOG:  database system is ready to accept connections
 
 To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
 
+From the command line outisde the Singularity container:
 ```bash
 cds
 mkdir tnris-lidardata
@@ -227,7 +228,7 @@ For reference, TNRIS's AWS S3 bucket of their Lidar data can be publicly accesse
 
 https://s3.console.aws.amazon.com/s3/buckets/tnris-public-data?region=us-east-1&prefix=production-data/
 
-From the parent directory of TNRIS Lidar data, on the command line:
+From the parent directory of TNRIS Lidar data, on the command line outside the Singularity container:
 ```bash
 find $(pwd) -maxdepth 4 -type f -wholename "*/dem/*.tif" -o -wholename "*/dem/*.img" -o -wholename "*/dem/*.dem" > $WORK/find_dem_tiles.csv
 sort -u $WORK/find_dem_tiles.csv > $WORK/find_dem_tiles-sorted.csv
@@ -240,14 +241,16 @@ From the PostgreSQL database:
 COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO current_setting('custom.scratch')||'/select_all_dem_tiles.csv' (FORMAT csv) ;
 ```
 
+From the command line outside of the Singularity container:
 ```bash
 comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
 
 ## Run raster2pgsql from the Singularity image
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif bash
 ```
+
+From the command line inside the Singularity container:
 ```bash
-## From the Singularity container connected to the database
 raster2pgsql -R -F -Y -I -M -e $(cat $WORK2/missing_dem_tiles.csv | tr "\n" " ") public.missing_dem_tiles > $WORK2/missing_dem_tiles.sql
 
 ## Once this is done, load the tiles' metadata to the PostgreSQL database using the following command
@@ -261,7 +264,7 @@ CREATE TABLE missing_dem_tiles_paths (absolutepath text) ;
 COPY missing_dem_tiles_paths FROM '$WORK2/missing_dem_tiles.csv' WITH (FORMAT csv) ;
 ```
 
-From the command line:
+From the command line outside the Singularity container:
 ```bash
 ## Add the following columns to the table:
 ##     - project
@@ -296,7 +299,7 @@ SELECT COUNT(DISTINCT(absolutepath)) FROM missing_dem_tiles WHERE srid_orig = 0 
 SELECT COUNT(DISTINCT(absolutepath)) FROM missing_dem_tiles WHERE srid = 0 ;
 ```
 
-From the command line:
+From the command line outside the Singularity container:
 ```bash
 ## Populate the following columns with correct(ed) metadata:
 ##     - rast : raster tile geometry in the corrected SRID/EPSG code)
@@ -319,7 +322,7 @@ DROP TABLE missing_dem_tiles ;
 ALTER TABLE updated_tnris_lidar_tiles RENAME TO tnris_lidar_tiles ;
 ```
 
-Once this table is corrected, the following command can be run from the PostGIS Singularity image command line to generate a new TNRIS Lidar availability file:
+Once this table is corrected, the following command can be run from the command line inside the Singularity container to generate a new TNRIS Lidar availability file:
 ```bash
 pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P pgpass -u postgres -g envelope_albers -k postgres public.tnris_lidar_tiles
 ```
@@ -328,19 +331,19 @@ pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P 
 
 # Retiling workflow
 
-PostgreSQL:
+From the PostgreSQL database:
 ```sql
 /* Replace with your preferred location below */
 COPY (SELECT DISTINCT(srid) FROM tnris_lidar_tiles) TO current_setting('custom.scratch')||'/distinct_srid.csv' (FORMAT csv) ;
 ```
 
-Create and activate the Conda environment from the command line:
+Create and activate the Conda environment from the command line outside the Singularity container:
 ```bash
 conda env create -f $TNRIS_LIDAR_POSTGRESQL/gdal.yml
 conda activate gdal
 ```
 
-Command line:
+From the command line outside the Singularity container:
 ```bash
 ## Please note that any tiles whose pixeltype != Float32 will need to be pre-treated with the following command before starting this workflow.
 ##  Thus far, ~142 tiles from the following two projects are impacted:
