@@ -109,7 +109,7 @@ Here is the new, simpler workflow starting from the `single_seamless_elevation` 
 
 # TNRIS Lidar DEM tiles at TACC
 
-@TACC now hosts TNRIS Lidar tiles for TACC users.
+[@TACC](https://github.com/TACC) now hosts TNRIS Lidar tiles for [TACC](https://www.tacc.utexas.edu/) users.
 
 To begin using TACC resources, please create a TACC account at the following page:
 
@@ -120,18 +120,20 @@ Once you have a TACC account, submit a ticket at the following page and CC dhl@t
 https://portal.tacc.utexas.edu/tacc-consulting
 
 # Intermediate retiling results
+
 Intermediate retiling results are available :
-- on Stampede2 at :
+- on [Stampede2](https://www.tacc.utexas.edu/systems/stampede2) at :
 ```bash
 stampede2.tacc.utexas.edu:/scratch/04950/dhl/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
 ```
-- and on Corral at :
+- and on [Corral](https://www.tacc.utexas.edu/systems/corral) at :
 ```bash
 data.tacc.utexas.edu:/corral/projects/TDIS/TNRIS-Lidar-retiling/TX_scale
 ```
 
 # TNRIS Lidar availability
-Here is a Shapefile of the extent of each TNRIS Lidar tile:
+
+Here is a Shapefile of the extent of each [TNRIS Lidar](https://tnris.org/stratmap/elevation-lidar/) tile:
 
 https://utexas.box.com/v/tnris-lidar-tiles-shp
 
@@ -144,27 +146,28 @@ https://spatialreference.org/ref/epsg/nad83-texas-centric-albers-equal-area/
 Each tile has the following attributes:
 | Attribute | Description |
 | --------- | ----------- |
-| rast | a reference address to the raster tile on Stampede2 |
-| filename | TRNIS Lidar tilename |
-| absolutepath | TNRIS Lidar tile absolute path on Stampede2 |
+| [rast](https://postgis.net/docs/raster.html) | a reference address to the raster tile on Stampede2 |
+| [filename](https://en.wikipedia.org/wiki/Filename) | TRNIS Lidar tilename |
+| [absolutepath](https://en.wikipedia.org/wiki/Path_(computing)#Absolute_and_relative_paths) | TNRIS Lidar tile absolute path on Stampede2 |
 | project | TNRIS Lidar project parent directory name |
-| srid | corrected SRID/EPSG code of the tile |
-| srid_orig | originally found SRID/EPSG code of the tile |
-| pixeltype | datatype of the pixels of the tile (float, integer, etc) |
-| envelope | polygon of the extent of the tile projected in the corrected EPSG |
-| centroid | centroid of the envelope projected in the corrected EPSG |
-| centroid_albers | centroid of the envelope projected in EPSG:3083 |
-| x | longitude of the centroid projected in EPSG:3083 |
-| y | latitude of the centroid projected in EPSG:3083 |
-| width | width of the tile in pixels |
-| height | height of the tile in pixels |
-| pixelwidth | width of each pixel in EPSG:3083 units (m) |
-| pixelheight | height of each pixel in EPSG:3083 units (m) |
-| colorinterp | color interpretation of the raster tile |
+| [srid](https://en.wikipedia.org/wiki/Spatial_reference_system#Identifiers) | corrected SRID/EPSG code of the tile |
+| [srid_orig](https://postgis.net/docs/ST_SRID.html) | originally found SRID/EPSG code of the tile |
+| [pixeltype](https://postgis.net/docs/RT_ST_BandPixelType.html) | datatype of the pixels of the tile (float, integer, etc) |
+| [envelope](https://postgis.net/docs/ST_Envelope.html) | polygon of the extent of the tile projected in the corrected EPSG |
+| [centroid](https://postgis.net/docs/ST_Centroid.html) | centroid of the envelope projected in the corrected EPSG |
+| [centroid_albers](https://en.wikipedia.org/wiki/Centroid) | centroid of the envelope projected in EPSG:3083 |
+| [x](https://postgis.net/docs/ST_X.html) | longitude of the centroid projected in EPSG:3083 |
+| [y](https://postgis.net/docs/ST_Y.html) | latitude of the centroid projected in EPSG:3083 |
+| [width](https://postgis.net/docs/RT_ST_Width.html) | width of the tile in pixels |
+| [height](https://postgis.net/docs/RT_ST_Height.html) | height of the tile in pixels |
+| [pixelwidth](https://postgis.net/docs/RT_ST_PixelWidth.html) | width of each pixel in EPSG:3083 units (m) |
+| [pixelheight](https://postgis.net/docs/RT_ST_PixelHeight.html) | height of each pixel in EPSG:3083 units (m) |
+| [colorinterp](https://rasterio.readthedocs.io/en/latest/topics/color.html) | color interpretation of the raster tile |
 
 # Software requirements (on Stampede2)
+
    - Singularity image : `docker://dhardestylewis/postgis:14-3.2-gdalogr`
-   - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/TNRIS-Lidar-PostgreSQL/main/gdal.yml`
+   - Conda environment : `https://raw.githubusercontent.com/dhardestylewis/terrain_aggregator/main/gdal.yml`
    - AWS CLI : `https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
 
 ## Singularity download and usage
