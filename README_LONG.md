@@ -243,7 +243,7 @@ COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO curre
 
 From the command line outside of the Singularity container:
 ```bash
-comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK2/missing_dem_tiles.csv
+comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK/missing_dem_tiles.csv
 
 ## Run raster2pgsql from the Singularity image
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif bash
@@ -251,17 +251,17 @@ SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singu
 
 From the command line inside the Singularity container:
 ```bash
-raster2pgsql -R -F -Y -I -M -e $(cat $WORK2/missing_dem_tiles.csv | tr "\n" " ") public.missing_dem_tiles > $WORK2/missing_dem_tiles.sql
+raster2pgsql -R -F -Y -I -M -e $(cat $WORK/missing_dem_tiles.csv | tr "\n" " ") public.missing_dem_tiles > $WORK/missing_dem_tiles.sql
 
 ## Once this is done, load the tiles' metadata to the PostgreSQL database using the following command
-psql -U postgres -d postgres -h 127.0.0.1 -f $WORK2/missing_dem_tiles.sql
+psql -U postgres -d postgres -h 127.0.0.1 -f $WORK/missing_dem_tiles.sql
 ```
 
 From the PostgreSQL database:
 ```sql
 CREATE TABLE missing_dem_tiles_paths (absolutepath text) ;
 /* Be sure to replace the following CSV path with your specific CSV path */
-COPY missing_dem_tiles_paths FROM '$WORK2/missing_dem_tiles.csv' WITH (FORMAT csv) ;
+COPY missing_dem_tiles_paths FROM '$WORK/missing_dem_tiles.csv' WITH (FORMAT csv) ;
 ```
 
 From the command line outside the Singularity container:
@@ -324,7 +324,7 @@ ALTER TABLE updated_tnris_lidar_tiles RENAME TO tnris_lidar_tiles ;
 
 Once this table is corrected, the following command can be run from the command line inside the Singularity container to generate a new TNRIS Lidar availability file:
 ```bash
-pgsql2shp -f $WORK2/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P pgpass -u postgres -g envelope_albers -k postgres public.tnris_lidar_tiles
+pgsql2shp -f $WORK/TNRIS-Lidar-Corrected_availability_file.shp -h 127.0.0.1 -P pgpass -u postgres -g envelope_albers -k postgres public.tnris_lidar_tiles
 ```
 
 *QAQC :* Keep in mind that a visual inspection of the resulting Shapefile is necessary in order to ensure that the tiles are all now in the correct projection.
