@@ -4,10 +4,9 @@
 The `terrain_aggregator` is a general-purpose terrain aggregation workflow.
 This workflow produces a single, uniform, and seamless raster terrain dataset at the best quality available.
 
+This workflow aggregates terrain tiles from a variety of raster DEM tilesets to a single uniform projection.
 
-The workflow below aggregates terrain tiles from a variety of raster DEM tilesets to a single uniform projection.
-
-Aggregation on a small-country scale takes at most 15 days compute time back-to-front, or about 3000 node-hours of computational time.
+The total processing time to aggregate tiles on a small-country scale (~1.6M km<sup>2</sup>) takes at most 15 days compute time back-to-front, or about 1600 node-hours of computational time.
 
 
 # Typical engineering workflow using terrain data
@@ -105,6 +104,31 @@ Here is the new, simpler workflow starting from the `single_seamless_elevation` 
     - No need if you use tile-delineated boundaries!
 
 6. **apply your engineering analysis** *!*
+
+
+# `terrain_aggregator` : how it was developed
+
+1. Create PostgreSQL database of TNRIS Lidar tiles
+
+    - TNRIS provides a [vector file](https://cdn.tnris.org/data/lidar/tnris-lidar_48_vector.zip) indexing the best available Lidar data TNRIS provides on a tile-by-tile basis.
+    - However, there are many deficiencies that prevent using this file as a starting point to aggregate Lidar data in bulk, including :
+        - only represents "best available" data, not all available TNRIS Lidar data
+        - tile geometries are sometimes
+            - incorrect :
+                - some tile boundaries have
+                    - rounded corners where there is data all the way to the corner
+                    - intersected with watersheds where there is data beyond the watershed boundaries
+                    - chopped along a latitude or longitude where there is data beyond the chop
+            - have inconsistently applied boundaries :
+                - when tiles overlap each other,
+                    - sometimes they are left whole
+                    - sometimes they are chopped in favor of the "best available"
+        - tile attributes are sometimes
+            - `demname` attribute errors :
+                - reported resolution incorrect
+            - reported resolution is sometimes 
+
+2. Create Docker/Singularity image of 
 
 
 # TNRIS Lidar DEM tiles at TACC
