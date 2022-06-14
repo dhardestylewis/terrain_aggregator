@@ -3,7 +3,7 @@
 ![1-alligator-logo-design](https://user-images.githubusercontent.com/15820710/173480749-c986feb8-07da-4d33-a0fb-3ef124b452eb.jpg)
 
 **The `terrain_aggregator` is a general-purpose terrain aggregation workflow.
-This workflow produces a <ins>single</ins>, <u>uniform</u>, and <u>seamless</u> raster terrain dataset at the <u>best quality available</u>.**
+This workflow produces a <ins>single</ins>, <ins>uniform</ins>, and <ins>seamless</ins> raster terrain dataset at the <ins>best quality available</ins>.**
 
 This workflow aggregates terrain tiles from a variety of raster DEM tilesets to a single uniform projection.
 
