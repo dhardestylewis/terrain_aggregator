@@ -67,7 +67,7 @@ Because of significant differences in Lidar data product standards and metadata 
     - **tile** - a simple boundary
     - tile-delineated watershed - a simplified natural boundary
     - tile-delineated county - a simplified political boundary
-    - *In practice, usually a tile-delineated watershed is taken.*
+    - *In practice, for flood modelling usually a tile-delineated watershed is taken.*
 
 6. **applying domain-specific engineering analysis**, such as :
 
