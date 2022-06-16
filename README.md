@@ -40,14 +40,14 @@ Because of significant differences in Lidar data product standards and metadata 
     | characteristic | description |
     | --------- | ----------- |
     | [spatial reference system](https://en.wikipedia.org/wiki/Spatial_reference_system) | projection + datum including unit of measurement (*e.g.* [NAD83 / UTM zone 14N](https://epsg.io/26914) + [NAVD88 height (m)](https://epsg.io/5703)) |
-    | [data type](https://en.wikipedia.org/wiki/Data_type) | data type of the pixel values of the tile (*e.g.* float, integer, *etc.*) |
+    | [pixel data type](https://en.wikipedia.org/wiki/Data_type) | data type of the pixel values of the tile (*e.g.* float, integer, *etc.*) |
     | [color interpretation](https://rasterio.readthedocs.io/en/latest/topics/color.html) | human interpretation of color (*e.g.* black, RGB, *etc.*) |
 
     - **mosaicking**, to unify characteristics from this table :
 
     | characteristic | description |
     | --------- | ----------- |
-    | [geographic extent](https://en.wikipedia.org/wiki/Map_extent) | boundary box |
+    | [geographic extent](https://en.wikipedia.org/wiki/Map_extent) | boundary box of the tile |
     | [pixel width](https://en.wikipedia.org/wiki/Spatial_resolution) | width of spatial resolution (usually in meters) |
     | [pixel height](https://en.wikipedia.org/wiki/Spatial_resolution) | height of spatial resolution (usually in meters) |
 
@@ -55,8 +55,8 @@ Because of significant differences in Lidar data product standards and metadata 
 
     | characteristic | description |
     | --------- | ----------- |
-    | [width](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | width of each tile (in pixels) |
-    | [height](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | height of each tile (in pixels) |
+    | [tile width](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | width of each tile (in pixels) |
+    | [tile height](https://en.wikipedia.org/wiki/Tiled_web_map#Defining_a_tiled_web_map) | height of each tile (in pixels) |
 
     - *In practice, transforming & mosaicking must be done in a very careful order to prevent common raster transformation issues.*
 
