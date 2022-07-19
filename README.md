@@ -125,7 +125,7 @@ https://portal.tacc.utexas.edu/tacc-consulting
 Intermediate retiling results are available :
 - on [Stampede2](https://www.tacc.utexas.edu/systems/stampede2) at :
 ```bash
-stampede2.tacc.utexas.edu:/scratch/04950/dhl/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
+stampede2.tacc.utexas.edu:/scratch/04950/dhl/TNRIS-Lidar/TNRIS-Lidar-retiling/srid_colorinterp_pixeltype.csv.d/3083.vrt.d
 ```
 - and on [Corral](https://www.tacc.utexas.edu/systems/corral) at :
 ```bash
@@ -195,11 +195,30 @@ cd terrain_aggregator
 export TERRAIN_AGGREGATOR=$(pwd)
 ```
 
+# Uploading the TNRIS Lidar database
+
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
 ```bash
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
 for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
+```
+
+Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
+
+https://portal.tacc.utexas.edu/tacc-consulting
+
+*Note :* Please wait for the following output before trying to access this database:
+```bash
+LOG:  database system is ready to accept connections
+```
+
+# Accessing the latest TNRIS Lidar database
+
+To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
+```bash
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
+SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 
 Please submit a ticket if you don't have permission to access this database and be sure to CC dhl@tacc.utexas.edu
