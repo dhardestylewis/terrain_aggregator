@@ -199,8 +199,11 @@ export TERRAIN_AGGREGATOR=$(pwd)
 
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
 ```bash
+## Start Postgres database
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
+## Upload TNRIS Lidar table to database
 for filename in $(ls ${TERRAIN_AGGREGATOR}/TNRIS-Lidar-Tiles.sql.d/*.sql); do SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1 -f ${filename}; done
+## Connect to the Postgres database
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 
@@ -217,7 +220,9 @@ LOG:  database system is ready to accept connections
 
 To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
 ```bash
+## Start Postgres database
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity run --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif &
+## Connect to the Postgres database
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=/work2/04950/dhl/stampede2/pgdata SINGULARIRTYENV_PGOPTIONS="-c 'custom.scratch=${SCRATCH}'" singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif psql -U postgres -d postgres -h 127.0.0.1
 ```
 
