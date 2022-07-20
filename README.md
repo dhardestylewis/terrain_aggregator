@@ -185,7 +185,8 @@ idev
 ## to load the pre-existing Singularity module from TACC's module repository
 module load tacc-singularity
 ## to download this Singularity image from the online Docker Hub image repository
-singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr $WORK/postgis_14-3.2-gdalogr.sif
+cd $WORK
+singularity pull docker://dhardestylewis/postgis:14-3.2-gdalogr
 ```
 
 To clone this Git repository, use the following commands from the Stampede2 command line:
