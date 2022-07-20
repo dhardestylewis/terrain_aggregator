@@ -196,11 +196,13 @@ cd terrain_aggregator
 export TERRAIN_AGGREGATOR=$(pwd)
 ```
 
-# Uploading the TNRIS Lidar DEM database
+# Upload the TNRIS Lidar DEM database from GitHub
+
+*See [below](# Accessing the latest TNRIS Lidar database) to access the existing `terrain_aggregator` database hosted on Stampede2 @TACC.*
 
 *A copy of the TNRIS Lidar DEM database is kept on this GitHub repo under [`TNRIS-Lidar-Tiles.sql.d/`](https://github.com/dhardestylewis/terrain_aggregator/tree/main/TNRIS-Lidar-Tiles.sql.d)*
 
-To connect to the existing TNRIS Lidar PostgreSQL database, use the following commands from the Stampede2 command line:
+To create TNRIS Lidar PostgreSQL database from the copy hosted here on GitHub, use the following commands from the Stampede2 command line:
 ```bash
 ## Load Singularity module
 module load tacc-singularity
