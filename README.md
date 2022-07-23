@@ -248,7 +248,7 @@ LOG:  database system is ready to accept connections
 
 To populate the database with newly added tiles, the following commands can be used to generate a list of raster tiles to add to the table
 
-From the command line outisde the Singularity container:
+From the command line outside the Singularity container:
 ```bash
 cds
 mkdir tnris-lidardata
