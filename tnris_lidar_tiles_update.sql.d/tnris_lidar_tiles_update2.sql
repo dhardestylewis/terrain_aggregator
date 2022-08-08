@@ -1,8 +1,8 @@
 UPDATE missing_dem_tiles SET rast = ST_SetSRID(rast,srid) ;
 UPDATE missing_dem_tiles SET envelope = ST_Envelope(rast) ;
-UPDATE missing_dem_tiles SET envelope_albers = ST_Transform(envelope,6579) ;
+UPDATE missing_dem_tiles SET envelope_albers = ST_Transform(envelope,3083) ;
 UPDATE missing_dem_tiles SET centroid = ST_Centroid(envelope) ;
-UPDATE missing_dem_tiles SET centroid_albers = ST_Transform(centroid,6579) ;
+UPDATE missing_dem_tiles SET centroid_albers = ST_Transform(centroid,3083) ;
 UPDATE missing_dem_tiles SET x = ST_X(centroid) ;
 UPDATE missing_dem_tiles SET y = ST_Y(centroid) ;
 UPDATE missing_dem_tiles SET pixelwidth = ST_PixelWidth(rast) ;
