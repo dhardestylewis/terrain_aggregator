@@ -1,8 +1,8 @@
 ALTER TABLE missing_dem_tiles ADD COLUMN absolutepath text, ADD COLUMN project text, ADD COLUMN srid_orig integer, ADD COLUMN srid integer, ADD COLUMN pixeltype text, ADD COLUMN x float, ADD COLUMN y float, ADD COLUMN width integer, ADD COLUMN height integer, ADD COLUMN pixelwidth float, ADD COLUMN pixelheight float;
 SELECT AddGeometryColumn('public','missing_dem_tiles','envelope',0,'POLYGON',2) ;
-SELECT AddGeometryColumn('public','missing_dem_tiles','envelope_albers',6579,'POLYGON',2) ;
+SELECT AddGeometryColumn('public','missing_dem_tiles','envelope_albers',3083,'POLYGON',2) ;
 SELECT AddGeometryColumn('public','missing_dem_tiles','centroid',0,'POINT',2) ;
-SELECT AddGeometryColumn('public','missing_dem_tiles','centroid_albers',6579,'POINT',2) ;
+SELECT AddGeometryColumn('public','missing_dem_tiles','centroid_albers',3083,'POINT',2) ;
 UPDATE missing_dem_tiles SET project = p.project FROM absolutepaths AS p WHERE missing_dem_tiles.filename = p.filename ;
 UPDATE missing_dem_tiles SET absolutepath = p.absolutepath FROM absolutepaths AS p WHERE missing_dem_tiles.filename = p.filename ;
 UPDATE missing_dem_tiles SET srid_orig = ST_SRID(rast) ;
