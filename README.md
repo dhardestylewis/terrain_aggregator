@@ -67,14 +67,14 @@ Because of significant differences in Lidar data product standards and metadata 
     - **tile** - a simple boundary
     - tile-delineated watershed - a simplified natural boundary
     - tile-delineated county - a simplified political boundary
-    - *In practice, for flood modelling usually a tile-delineated watershed is taken.*
+    - *In practice, for flood modeling usually a tile-delineated watershed is taken.*
 
 6. **applying domain-specific engineering analysis**, such as :
 
     - [Height Above Nearest Drainage (HAND)](https://nhess.copernicus.org/articles/19/2405/2019/#:~:text=2.1%20Height%20Above%20Nearest%20Drainage,of%20a%20region's%20river%20network.)
     - [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/)
     - *etc.*
-    - *In practice, for flood modelling HEC-RAS is the gold standard and by far the most commonly used.*
+    - *In practice, for flood modeling HEC-RAS is the gold standard and by far the most commonly used.*
 
 
 # Simplifying this workflow
@@ -87,7 +87,7 @@ Here is the new, simpler workflow starting from the `single_seamless_elevation` 
 1. **determine `single_seamless_elevation` coverage** from a single data hub *!*
 
     - [TNRIS](https://tnris.org/)/[TDIS](https://idrt.tamug.edu/tdis/)'s [Terrain Data Downloader](https://agis-sec-green2.csr.utexas.edu/lidar/lidar_downloads.html) : in-development elevation data organized by tile in Texas
-    - *The `single_seamless_elevation` is in development; availabity & coverage may vary*
+    - *The `single_seamless_elevation` is in development; availability & coverage may vary*
 
 3. **select terrain tiles** by coverage *!*
 
@@ -413,7 +413,7 @@ gdal_retile.py -overlap 100 -tileIndex albers-warped.shp -csv albers-warped.csv 
 ## Create a VRT of the retiles:
 gdalbuildvrt -resolution highest albers-warped.d.vrt albers-warped.d/*.tif
 
-## Crop watershed-delineated DEMs from these retiles, using features labelled by the `index` attribute in a separate vector image
+## Crop watershed-delineated DEMs from these retiles, using features labeled by the `index` attribute in a separate vector image
 mkdir HUCs.d
 NUMBER_OF_HUCS=739
 for huc in $(seq 0 $(( ${NUMBER_OF_HUCS} - 1)) ); do gdalwarp -multi -cutline HUCs.shp -cl HUCs -cwhere "index=${huc}" -crop_to_cutline albers-warped.d.vrt HUCs.d/HUC${huc}.tif ; done
@@ -457,7 +457,7 @@ license document, but changing it is not allowed.
 The purpose of this License is to make a manual, textbook, or other
 functional and useful document "free" in the sense of freedom: to
 assure everyone the effective freedom to copy and redistribute it,
-with or without modifying it, either commercially or noncommercially.
+with or without modifying it, either commercially or non commercially.
 Secondarily, this License preserves for the author and publisher a way
 to get credit for their work, while not being considered responsible
 for modifications made by others.
@@ -567,7 +567,7 @@ no effect on the meaning of this License.
 #### 2. VERBATIM COPYING
 
 You may copy and distribute the Document in any medium, either
-commercially or noncommercially, provided that this License, the
+commercially or non commercially, provided that this License, the
 copyright notices, and the license notice saying this License applies
 to the Document are reproduced in all copies, and that you add no
 other conditions whatsoever to those of this License. You may not use
@@ -883,9 +883,8 @@ If you have Invariant Sections without Cover Texts, or some other
 combination of the three, merge those two alternatives to suit the
 situation.
 
-If your document contains nontrivial examples of program code, we
+If your document contains non trivial examples of program code, we
 recommend releasing these examples in parallel under your choice of
 free software license, such as the GNU General Public License, to
 permit their use in free software.
-
 
