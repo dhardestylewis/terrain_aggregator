@@ -10,6 +10,12 @@ This workflow aggregates terrain tiles from a variety of raster DEM tilesets to 
 The total processing time to aggregate tiles on a small-country scale (~1.6M km<sup>2</sup>) takes at most 15 days compute time back-to-front, or about 1600 node-hours of computational time.
 
 
+## Citation
+
+D. Hardesty Lewis, S. Pierce, P. Passalacqua, et al. `terrain_aggregator`, GitHub
+10.5281/zenodo.7005059
+
+
 # Typical engineering workflow using terrain data
 
 
