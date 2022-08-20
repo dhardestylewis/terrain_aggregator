@@ -14,7 +14,7 @@ The total processing time to aggregate tiles on a small-country scale (~1.6M km<
 
 D. Hardesty Lewis, S. A. Pierce, P. Passalacqua, et al (2022), `terrain_aggregator`, GitHub
 
-10.5281/zenodo.7005059
+https://doi.org/10.5281/zenodo.7005059
 
 
 # Typical engineering workflow using terrain data
