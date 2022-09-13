@@ -269,6 +269,7 @@ For reference, TNRIS's AWS S3 bucket of their Lidar data can be publicly accesse
 
 https://s3.console.aws.amazon.com/s3/buckets/tnris-public-data?region=us-east-1&prefix=production-data/
 
+First we gather a list of tiles that we want to record in the database.
 From the parent directory of TNRIS Lidar data, on the command line outside the Singularity container:
 ```bash
 find $(pwd) -maxdepth 4 -type f -wholename "*/dem/*.tif" -o -wholename "*/dem/*.img" -o -wholename "*/dem/*.dem" > $WORK/find_dem_tiles.csv
@@ -276,12 +277,14 @@ sort -u $WORK/find_dem_tiles.csv > $WORK/find_dem_tiles-sorted.csv
 mv $WORK/find_dem_tiles-sorted.csv $WORK/find_dem_tiles.csv
 ```
 
+Then we gather a list of existing tiles in the database.
 From the PostgreSQL database:
 ```sql
 /* replace the following CSV path with your equivalent */
 COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO current_setting('custom.scratch')||'/select_all_dem_tiles.csv' (FORMAT csv) ;
 ```
 
+We compare lists to find which tiles are not currently in the database
 From the command line outside of the Singularity container:
 ```bash
 comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK/missing_dem_tiles.csv
@@ -290,6 +293,7 @@ comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK/m
 SINGULARITYENV_POSTGRES_PASSWORD=pgpass SINGULARITYENV_PGDATA=$WORK/pgdata singularity exec --cleanenv --bind $SCRATCH:/var $WORK/postgis_14-3.2-gdalogr.sif bash
 ```
 
+We upload the tiles to the database.
 From the command line inside the Singularity container:
 ```bash
 raster2pgsql -R -F -Y -I -M -e $(cat $WORK/missing_dem_tiles.csv | tr "\n" " ") public.missing_dem_tiles > $WORK/missing_dem_tiles.sql
