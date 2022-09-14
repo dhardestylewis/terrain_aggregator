@@ -284,7 +284,7 @@ From the PostgreSQL database:
 COPY (SELECT absolutepath FROM tnris_lidar_tiles ORDER BY absolutepath) TO current_setting('custom.scratch')||'/select_all_dem_tiles.csv' (FORMAT csv) ;
 ```
 
-We compare lists to find which tiles are not currently in the database
+We compare lists to find which tiles are not currently in the database.
 From the command line outside of the Singularity container:
 ```bash
 comm -23 $SCRATCH/find_dem_tiles.csv $SCRATCH/select_all_dem_tiles.csv > $WORK/missing_dem_tiles.csv
