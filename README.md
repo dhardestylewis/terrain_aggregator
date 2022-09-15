@@ -333,6 +333,7 @@ From the command line outside the Singularity container:
 ##     - height : height of the tile in pixels
 ##     - pixelwidth : width of each pixel in EPSG:3083 (m)
 ##     - pixelheight : height of each pixel in EPSG:3083 (m)
+psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update0.sql
 psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update1.sql
 ```
 
