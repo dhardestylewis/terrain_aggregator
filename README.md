@@ -145,9 +145,9 @@ Here is a Shapefile of the extent of each [TNRIS Lidar](https://tnris.org/stratm
 
 https://utexas.box.com/v/tnris-lidar-tiles-shp
 
-This shapefile is projected in NAD83 / Texas Centric Albers Equal Area (EPSG:3083):
+This shapefile is projected in NAD83(2011) / Texas Centric Albers Equal Area (EPSG:6579):
 
-https://epsg.io/3083
+https://epsg.io/6579
 
 https://spatialreference.org/ref/epsg/nad83-texas-centric-albers-equal-area/
 
@@ -163,13 +163,13 @@ Each tile has the following attributes:
 | [pixeltype](https://postgis.net/docs/RT_ST_BandPixelType.html) | datatype of the pixels of the tile (float, integer, etc) |
 | [envelope](https://postgis.net/docs/ST_Envelope.html) | polygon of the extent of the tile projected in the corrected EPSG |
 | [centroid](https://postgis.net/docs/ST_Centroid.html) | centroid of the envelope projected in the corrected EPSG |
-| [centroid_albers](https://en.wikipedia.org/wiki/Centroid) | centroid of the envelope projected in EPSG:3083 |
-| [x](https://postgis.net/docs/ST_X.html) | longitude of the centroid projected in EPSG:3083 |
-| [y](https://postgis.net/docs/ST_Y.html) | latitude of the centroid projected in EPSG:3083 |
+| [centroid_albers](https://en.wikipedia.org/wiki/Centroid) | centroid of the envelope projected in EPSG:6579 |
+| [x](https://postgis.net/docs/ST_X.html) | longitude of the centroid projected in EPSG:6579 |
+| [y](https://postgis.net/docs/ST_Y.html) | latitude of the centroid projected in EPSG:6579 |
 | [width](https://postgis.net/docs/RT_ST_Width.html) | width of the tile in pixels |
 | [height](https://postgis.net/docs/RT_ST_Height.html) | height of the tile in pixels |
-| [pixelwidth](https://postgis.net/docs/RT_ST_PixelWidth.html) | width of each pixel in EPSG:3083 units (m) |
-| [pixelheight](https://postgis.net/docs/RT_ST_PixelHeight.html) | height of each pixel in EPSG:3083 units (m) |
+| [pixelwidth](https://postgis.net/docs/RT_ST_PixelWidth.html) | width of each pixel in EPSG:6579 units (m) |
+| [pixelheight](https://postgis.net/docs/RT_ST_PixelHeight.html) | height of each pixel in EPSG:6579 units (m) |
 | [colorinterp](https://rasterio.readthedocs.io/en/latest/topics/color.html) | color interpretation of the raster tile |
 
 # Software requirements (on Stampede2)
@@ -331,8 +331,8 @@ From the command line outside the Singularity container:
 ##     - pixeltype : datatype of the pixels of the tile (float, integer, etc)
 ##     - width : width of the tile in pixels
 ##     - height : height of the tile in pixels
-##     - pixelwidth : width of each pixel in EPSG:3083 (m)
-##     - pixelheight : height of each pixel in EPSG:3083 (m)
+##     - pixelwidth : width of each pixel in EPSG:6579 (m)
+##     - pixelheight : height of each pixel in EPSG:6579 (m)
 psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update0.sql
 psql -U postgres -d postgres -h 127.0.0.1 -f $TNRIS_LIDAR_POSTGRESQL/tnris_lidar_tiles_update.sql.d/tnris_lidar_tiles_update1.sql
 ```
@@ -408,12 +408,12 @@ for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_project
 for filename in $(ls *.srid); do gdal_translate -colorinterp undefined ${filename}.vrt ${filename}-translated.vrt; done
 
 ## Conduct a `gdalwarp` for each unique EPSG's VRT:
-for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:3083 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
+for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:6579 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
 
 ## EPSGs 2277-2279 will require manual intervention in order to tile successfully.
 ## They have a vertical datum of NAVD88 (ftUS).
 ## Run the following command to shift their pixel values to NAVD88 (m):
-for filename in $(ls 227[7-9].srid); do gdalwarp -s_srs $(basename ${filename} .srid)+6360 -t_srs EPSG:3083+5703 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
+for filename in $(ls 227[7-9].srid); do gdalwarp -s_srs EPSG:$(basename ${filename} .srid)+6360 -t_srs EPSG:6579+5703 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
 
 ## Conduct a `gdalbuildvrt` to create a VRT of warped VRTs:
 gdalbuildvrt -resolution highest albers-warped.vrt *-warped.vrt
