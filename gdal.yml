@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - gdal=3.4.1
+  - gdal
   - postgis
   - mapserver
 prefix: /work/04950/dhl/stampede2/miniconda3/envs/gdal
