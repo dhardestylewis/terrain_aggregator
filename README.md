@@ -402,10 +402,10 @@ From the command line outside the Singularity container:
 while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < $TNRIS_LIDAR_POSTGRESQL/distinct_srid.csv
 
 ## Conduct a `gdalbuildvrt` for each unique EPSG:
-for filename in $(ls *.srid); do gdalbuildvrt -resolution highest -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
+for filename in $(ls *.srid); do gdalbuildvrt -resolution user -tr 1 1 -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
 
 ## Conduct a `gdal_translate` for each unique EPSG's VRT:
-for filename in $(ls *.srid); do gdal_translate -colorinterp undefined ${filename}.vrt ${filename}-translated.vrt; done
+for filename in $(ls *.srid); do gdal_translate -of VRT -colorinterp gray ${filename}.vrt ${filename}-translated.vrt; done
 
 ## Conduct a `gdalwarp` for each unique EPSG's VRT:
 for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:6579 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
@@ -416,19 +416,14 @@ for filename in $(ls *.srid); do gdalwarp -t_srs EPSG:6579 -multi -overwrite -se
 for filename in $(ls 227[7-9].srid); do gdalwarp -s_srs EPSG:$(basename ${filename} .srid)+6360 -t_srs EPSG:6579+5703 -multi -overwrite -setci ${filename}-translated.vrt ${filename}-warped.vrt; done
 
 ## Conduct a `gdalbuildvrt` to create a VRT of warped VRTs:
-gdalbuildvrt -resolution highest albers-warped.vrt *-warped.vrt
+gdalbuildvrt -resolution user -tr 1 1 -allow_projection_difference 6579-warped.vrt $(ls -r *-warped.vrt)
 
 ## Conduct a retiling:
-mkdir albers-warped.d
-gdal_retile.py -overlap 100 -tileIndex albers-warped.shp -csv albers-warped.csv -ps 1600 1600 -levels 20 -resume -targetDir albers-warped.d albers-warped.vrt
+mkdir 6579-warped.d
+gdal_retile.py -tileIndex 6579-warped.shp -csv 6579-warped.csv -levels 20 -resume -targetDir 6579-warped.d 6579-warped.vrt
 
 ## Create a VRT of the retiles:
-gdalbuildvrt -resolution highest albers-warped.d.vrt albers-warped.d/*.tif
-
-## Crop watershed-delineated DEMs from these retiles, using features labelled by the `index` attribute in a separate vector image
-mkdir HUCs.d
-NUMBER_OF_HUCS=739
-for huc in $(seq 0 $(( ${NUMBER_OF_HUCS} - 1)) ); do gdalwarp -multi -cutline HUCs.shp -cl HUCs -cwhere "index=${huc}" -crop_to_cutline albers-warped.d.vrt HUCs.d/HUC${huc}.tif ; done
+gdalbuildvrt -resolution user -tr 1 1 6579-warped.d.vrt 6579-warped.d/*.tif
 ```
 
 # Testing environment
