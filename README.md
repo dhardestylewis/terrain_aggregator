@@ -402,7 +402,7 @@ From the command line outside the Singularity container:
 while read srid; do psql -d postgres -t -A -F"," -c "SELECT absolutepath FROM tnris_lidar_tiles WHERE srid = ${srid}" > ${srid}.srid ; done < $TNRIS_LIDAR_POSTGRESQL/distinct_srid.csv
 
 ## Conduct a `gdalbuildvrt` for each unique EPSG:
-for filename in $(ls *.srid); do gdalbuildvrt -resolution user -tr 1 1 -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
+for filename in $(ls *.srid); do gdalbuildvrt -allow_projection_difference -vrtnodata -9999. -a_srs EPSG:$(basename ${filename} .srid) -input_file_list ${filename} -overwrite ${filename}.vrt; done
 
 ## Conduct a `gdal_translate` for each unique EPSG's VRT:
 for filename in $(ls *.srid); do gdal_translate -of VRT -colorinterp gray ${filename}.vrt ${filename}-translated.vrt; done
