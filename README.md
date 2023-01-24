@@ -17,6 +17,10 @@ D. Hardesty Lewis, S. A. Pierce, P. Passalacqua, et al (2022), `terrain_aggregat
 https://doi.org/10.5281/zenodo.7005059
 
 
+# Currently available `single_seamless_elevation` tiles
+![Currently available `single_seamless_elevation` tiles](6.png)
+
+
 # Typical engineering workflow using terrain data
 
 
