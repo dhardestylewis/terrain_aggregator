@@ -1,6 +1,15 @@
 # The terrain aggregator
 
+*v2.0.0 upcoming public release*
+
 ![1-alligator-logo-design](https://user-images.githubusercontent.com/15820710/173480749-c986feb8-07da-4d33-a0fb-3ef124b452eb.jpg)
+
+Licensing is open-source as always!
+- Software: [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+- Data: [CC-BY-SA 4.0 Intl](https://creativecommons.org/licenses/by-sa/4.0/)
+- Database: [ODbL](https://opendatacommons.org/licenses/odbl/)
+- Database contents: [DbCL](https://opendatacommons.org/licenses/dbcl/1-0/)
+- Documentation: [GFDL](https://www.gnu.org/licenses/fdl-1.3.html)
 
 **The `terrain_aggregator` is a general-purpose terrain aggregation workflow.
 This workflow produces a <ins>single</ins>, <ins>uniform</ins>, and <ins>seamless</ins> raster terrain dataset at the <ins>highest quality available</ins>.**
