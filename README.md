@@ -1,5 +1,7 @@
 # The terrain aggregator
 
+[**Link to the map!**](http://agis-sec-green2.csr.utexas.edu/resources/lidar_elevation.html)
+
 ![1-alligator-logo-design](https://user-images.githubusercontent.com/15820710/173480749-c986feb8-07da-4d33-a0fb-3ef124b452eb.jpg)
 
 Licensing is open-source as always!
