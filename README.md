@@ -1,7 +1,5 @@
 # The terrain aggregator
 
-*v2.0.0 upcoming public release*
-
 ![1-alligator-logo-design](https://user-images.githubusercontent.com/15820710/173480749-c986feb8-07da-4d33-a0fb-3ef124b452eb.jpg)
 
 Licensing is open-source as always!
